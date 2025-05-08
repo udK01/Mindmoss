@@ -4,7 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#1C1C1C",
+        dark_gray: "#1C1C1C",
+        light_gray: "#A6A6A6",
+        beige: "#F1E9DB",
+        grass: "#4C6A51",
+        highlight: "#9CB79C",
+      },
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+        finger: ['"Finger Paint"', "cursive"],
       },
     },
   },
