@@ -2,7 +2,7 @@ import "./Hero.css";
 
 export default function Hero() {
   return (
-    <div className="flex justify-between items-center w-full gap-20 px-[15%] pt-[10%]">
+    <div className="h-screen flex items-center w-full gap-20 px-[15%]">
       {/* Left Container */}
       <div className="flex flex-col space-y-[60px] max-w-[50%]">
         {/* Title */}
@@ -33,7 +33,7 @@ export default function Hero() {
       </div>
 
       {/* Right Container */}
-      <div className="flex flex-col -space-y-40">
+      <div className="flex flex-col -space-y-40 max-w-[50%]">
         <img src="./HeroImage/image1.png" />
         <img src="./HeroImage/image2.png" className="z-10 scale-110" />
         <img src="./HeroImage/image3.png" />
