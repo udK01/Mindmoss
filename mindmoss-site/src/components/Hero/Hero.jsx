@@ -14,16 +14,19 @@ export default function Hero() {
           />
         </div>
         {/* Hero Text */}
-        <div className="font-roboto font-light text-[24px]">
-          <div>We grow experimental games and digital ideas.</div>
-          <div className="ml-2">
+        <div className="font-roboto font-light text-[24px] whitespace-nowrap">
+          <span>We grow experimental games and digital ideas.</span>
+          <br />
+          <span className="ml-2">
             A small indie studio creating atmospheric experiences.
-          </div>
+          </span>
         </div>
         {/* CTA Buttons */}
         <div className="flex items-center gap-[30px] text-[24px] font-semibold font-poppins">
-          <div className="px-4 py-2 bg-grass text-beige">View Our Work</div>
-          <div className="px-4 py-1 ring-4 ring-grass text-grass">
+          <div className="px-4 py-2 bg-grass text-beige hover:cursor-pointer transition-all duration-300">
+            View Our Work
+          </div>
+          <div className="px-4 py-1 ring-4 ring-grass text-grass hover:bg-grass hover:cursor-pointer hover:text-beige transition-all duration-300">
             Read Our Logs
           </div>
         </div>

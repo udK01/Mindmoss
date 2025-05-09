@@ -1,15 +1,9 @@
+import { IoMdMenu } from "react-icons/io";
+
 export default function Header() {
   return (
-    <div className="bg-dark_gray flex items-center justify-between text-white text-[24px] px-[32px]">
-      <img src="./Logo.png" />
-      <div className="flex gap-8">
-        <div>Home</div>
-        <div>About</div>
-        <div>Library</div>
-        <div>Dev Logs</div>
-        <div>Contact</div>
-      </div>
-      <div>Login</div>
+    <div className="fixed top-4 right-0 flex items-center justify-end text-white text-[24px] px-[32px] z-50 w-full">
+      <IoMdMenu className="text-dark_gray text-[48px] cursor-pointer" />
     </div>
   );
 }
