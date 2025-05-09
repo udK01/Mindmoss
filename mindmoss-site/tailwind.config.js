@@ -13,6 +13,8 @@ export default {
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
         finger: ['"Finger Paint"', "cursive"],
+        poppins: ["Poppins", "sans-serif"],
+        rubikWet: ['"Rubik Wet Paint"', "cursive"],
       },
     },
   },
