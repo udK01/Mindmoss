@@ -10,7 +10,8 @@ export default function ExploreOurGames() {
         </div>
 
         {/* Image below the text */}
-        <img src="./PaintDrip.png" className="absolute" />
+        {/* Image */}
+        <div className="absolute w-full h-[300px] bg-gray-500" />
       </div>
 
       <div className="py-40 px-40">
