@@ -15,6 +15,7 @@ export default {
         finger: ['"Finger Paint"', "cursive"],
         poppins: ["Poppins", "sans-serif"],
         rubikWet: ['"Rubik Wet Paint"', "cursive"],
+        patrick: ['"Patrick Hand"', "cursive"],
       },
     },
   },
