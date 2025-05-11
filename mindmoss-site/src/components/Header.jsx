@@ -6,8 +6,10 @@ export default function Header({ isOpen, setIsOpen }) {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span
-          className={`h-[4px] bg-dark_gray transition-all duration-300 group-hover:bg-grass ${
-            isOpen ? "rotate-45 translate-y-[13px]" : ""
+          className={`h-[4px] bg-dark_gray transition-all duration-300 ${
+            isOpen
+              ? "rotate-45 translate-y-[13px] group-hover:bg-beige"
+              : "group-hover:bg-grass"
           }`}
         />
         <span
@@ -16,8 +18,10 @@ export default function Header({ isOpen, setIsOpen }) {
           }`}
         />
         <span
-          className={`h-[4px] bg-dark_gray transition-all duration-300 group-hover:bg-grass ${
-            isOpen ? "-rotate-45 -translate-y-[13px]" : ""
+          className={`h-[4px] bg-dark_gray transition-all duration-300 ${
+            isOpen
+              ? "-rotate-45 -translate-y-[13px] group-hover:bg-beige"
+              : "group-hover:bg-grass"
           }`}
         />
       </div>

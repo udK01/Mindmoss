@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import { AnimatePresence } from "framer-motion";
+
 import Menu from "./components/Menu";
 import Header from "./components/Header";
 import Hero from "./components/Hero/Hero";
@@ -19,7 +21,7 @@ function App() {
     <section>
       {/* <Header /> */}
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-      {isOpen && <Menu />}
+      <AnimatePresence>{isOpen && <Menu />}</AnimatePresence>
       <Hero />
       <ExploreOurGames />
       {/* Background */}
