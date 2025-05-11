@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import Menu from "./components/Menu";
+import Contact from "./components/Contact";
 import Header from "./components/Header";
-import Hero from "./components/Hero/Hero";
-import ExploreOurGames from "./components/ExploreOurGames";
+import Menu from "./components/Menu";
+import Home from "./components/Home";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,15 +19,15 @@ function App() {
   }, [isOpen]);
 
   return (
-    <section>
+    <Router>
       {/* <Header /> */}
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <AnimatePresence>{isOpen && <Menu />}</AnimatePresence>
-      <Hero />
-      <ExploreOurGames />
-      {/* Background */}
-      <div className="w-full h-full bg-beige absolute -z-50 inset-0" />
-    </section>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 
