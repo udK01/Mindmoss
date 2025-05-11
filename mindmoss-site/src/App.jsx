@@ -22,9 +22,14 @@ function App() {
     <Router>
       {/* <Header /> */}
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-      <AnimatePresence>{isOpen && <Menu />}</AnimatePresence>
+      <AnimatePresence>
+        {isOpen && <Menu setIsOpen={setIsOpen} />}
+      </AnimatePresence>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<Contact />} />
+        <Route path="/library" element={<Contact />} />
+        <Route path="/dev-logs" element={<Contact />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
