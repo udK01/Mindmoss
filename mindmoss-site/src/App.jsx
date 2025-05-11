@@ -1,14 +1,25 @@
-import React from "react";
+import { useEffect, useState } from "react";
 
+import Menu from "./components/Menu";
 import Header from "./components/Header";
 import Hero from "./components/Hero/Hero";
 import ExploreOurGames from "./components/ExploreOurGames";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   return (
     <section>
       {/* <Header /> */}
-      <Header />
+      <Header isOpen={isOpen} setIsOpen={setIsOpen} />
+      {isOpen && <Menu />}
       <Hero />
       <ExploreOurGames />
       {/* Background */}

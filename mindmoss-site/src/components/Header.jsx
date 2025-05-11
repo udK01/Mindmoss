@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
+export default function Header({ isOpen, setIsOpen }) {
   return (
     <div className="fixed top-8 right-4 flex items-center justify-end text-white px-[32px] z-50 w-full">
       <div
