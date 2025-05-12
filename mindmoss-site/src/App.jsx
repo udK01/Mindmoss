@@ -4,7 +4,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Contact from "./components/Contact";
+import DevLogs from "./components/DevLogs";
+import Library from "./components/Library";
 import Header from "./components/Header";
+import About from "./components/About";
 import Menu from "./components/Menu";
 import Home from "./components/Home";
 
@@ -27,9 +30,9 @@ function App() {
       </AnimatePresence>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<Contact />} />
-        <Route path="/library" element={<Contact />} />
-        <Route path="/dev-logs" element={<Contact />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/library" element={<Library />} />
+        <Route path="/dev-logs" element={<DevLogs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
