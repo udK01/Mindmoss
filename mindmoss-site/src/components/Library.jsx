@@ -1,3 +1,7 @@
 export default function Library() {
-  return <section></section>;
+  return (
+    <section>
+      <div className="bg-grass"></div>
+    </section>
+  );
 }
