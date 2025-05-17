@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 
 import Contact from "./components/Contact";
 import DevLogs from "./components/DevLogs";
-import Library from "./components/Library";
+import Library from "./components/Library/Library";
 import Header from "./components/Header";
 import About from "./components/About";
 import Menu from "./components/Menu";
