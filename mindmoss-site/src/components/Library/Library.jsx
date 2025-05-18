@@ -44,7 +44,7 @@ Dont go bankrupt - the more you build, the more you pay. Keep your buildings rep
 
 export default function Library() {
   return (
-    <section className="flex flex-col items-center h-full min-h-screen relative mt-40">
+    <section className="bg-beige flex flex-col items-center h-full min-h-screen relative pt-40">
       {libraryCardInfo.map((libraryCard, index) => (
         <LibraryCard
           key={index}
