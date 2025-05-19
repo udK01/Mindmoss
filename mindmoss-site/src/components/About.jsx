@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 export default function About() {
   const aboutInfo = [
     {
@@ -27,22 +29,56 @@ export default function About() {
   ];
 
   const AboutComponent = ({
+    index,
     year = "9999",
     sideImage = "./AboutImages/2021Image.png",
     backgroundText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     left = false,
   }) => {
+    const [isInView, setIsInView] = useState(false);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+          }
+        },
+        { threshold: 0.2 }
+      );
+
+      const element = document.getElementById(`about-info-${index}`);
+      if (element) observer.observe(element);
+
+      return () => {
+        if (element) observer.unobserve(element);
+      };
+    }, [index]);
+
     return (
       <div
+        id={`about-info-${index}`}
         className={`flex ${
           left ? "flex-row" : "flex-row-reverse space-x-reverse"
         } w-[80%] mx-auto -space-x-40 justify-center items-center`}
       >
-        <img src={sideImage} alt="Side" />
+        <img
+          src={sideImage}
+          alt="Side"
+          className={`${
+            isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          } transition-all duration-700`}
+        />
         <div className="flex flex-col space-y-2">
           {/* Year + Brush Stroke */}
           <div className={`w-full flex ${!left && "justify-end"}`}>
-            <div className="relative w-fit h-fit">
+            <div
+              className={`relative w-fit h-fit ${
+                isInView
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              } transition-all duration-1000`}
+            >
               <img
                 src="./BrushStrokes/Title.png"
                 className="h-[70px] w-auto z-0"
@@ -58,10 +94,14 @@ export default function About() {
           <div className="relative bg-grass w-[600px] p-4 rounded-[30px]">
             <img
               src="./AboutImages/Drip.png"
-              className="absolute left-0 top-[80%] w-[600px]"
+              className={`absolute left-0 top-[80%] w-[600px] ${
+                isInView ? "translate-y-0" : "-translate-y-14"
+              } transition-all duration-[2400ms] ease-in-out`}
               alt="Drip"
             />
-            <div className="relative z-10 font-poppins text-[20px] text-beige">
+            <div
+              className={`relative z-10 font-poppins text-[20px] text-beige  `}
+            >
               {backgroundText}
             </div>
           </div>
@@ -86,6 +126,7 @@ export default function About() {
       {aboutInfo.map((a, i) => (
         <AboutComponent
           key={i}
+          index={i}
           year={a.year}
           sideImage={a.sideImage}
           backgroundText={a.backgroundText}
@@ -95,34 +136,3 @@ export default function About() {
     </section>
   );
 }
-
-// <div className="flex w-[80%] mx-auto py-20 -space-x-40 justify-center">
-//   <img src="./AboutImages/2021Image.png" />
-//   <div className="flex flex-col space-y-2">
-//     <div className="w-full flex">
-//       <div className="relative w-fit h-fit">
-//         <img
-//           src="./BrushStrokes/Title.png"
-//           className="h-[70px] w-auto z-0"
-//           alt="Brush stroke"
-//         />
-//         <div className="absolute inset-0 flex items-center pb-4 justify-center z-10 font-finger text-[60px] text-beige">
-//           2021
-//         </div>
-//       </div>
-//     </div>
-
-//     {/* Background */}
-//     <div className="relative bg-grass w-[600px] p-4 rounded-[30px]">
-//       <img
-//         src="./AboutImages/Drip.png"
-//         className="absolute left-0 top-[80%] w-[600px]"
-//       />
-//       <div className="relative z-10 font-poppins text-[20px] text-beige">
-//         We met during our second year at Swansea University — our first
-//         time on campus after Covid-19 restrictions eased. That initial lab
-//         project marked the beginning of our collaboration.
-//       </div>
-//     </div>
-//   </div>
-// </div>
