@@ -91,7 +91,7 @@ export default function About() {
           </div>
 
           {/* Background text block */}
-          <div className="relative bg-grass w-[600px] p-4 rounded-[30px]">
+          <div className="relative bg-grass sm:w-[400px] md:w-[600px] p-4 rounded-[30px]">
             <img
               src="./AboutImages/Drip.png"
               className={`absolute left-0 top-[80%] w-[600px] ${
@@ -100,7 +100,7 @@ export default function About() {
               alt="Drip"
             />
             <div
-              className={`relative z-10 font-poppins text-[20px] text-beige  `}
+              className={`relative text-beige z-10 font-poppins sm:text-[12px] md:text-[20px] `}
             >
               {backgroundText}
             </div>
