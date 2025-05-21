@@ -113,7 +113,7 @@ export default function About() {
   return (
     <section className="bg-beige h-full min-h-screen py-[150px] space-y-40">
       {/* Title */}
-      <div className="relative w-full flex items-center justify-center">
+      <div className="relative w-full flex items-center justify-center animate-up">
         <div className="font-finger text-[72px] text-beige z-10">
           Who are we?
         </div>
