@@ -60,12 +60,12 @@ export default function About() {
         id={`about-info-${index}`}
         className={`flex ${
           left ? "flex-row" : "flex-row-reverse space-x-reverse"
-        } w-[80%] mx-auto -space-x-40 justify-center items-center`}
+        } w-[80%] mx-auto 2xs:space-y-52 md:-space-x-40 justify-center 2xs:items-start md:items-center`}
       >
         <img
           src={sideImage}
           alt="Side"
-          className={`${
+          className={`2xs:absolute md:static ${
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           } transition-all duration-700`}
         />
@@ -84,23 +84,23 @@ export default function About() {
                 className="h-[70px] w-auto z-0"
                 alt="Brush stroke"
               />
-              <div className="absolute inset-0 flex items-center pb-4 justify-center z-10 font-finger text-[60px] text-beige">
+              <div className="absolute inset-0 flex items-center pb-4 justify-center z-10 font-finger 2xs:text-[24px] md:text-[48px] lg:text-[60px] text-beige">
                 {year}
               </div>
             </div>
           </div>
 
           {/* Background text block */}
-          <div className="relative bg-grass sm:w-[400px] md:w-[600px] p-4 rounded-[30px]">
+          <div className="relative bg-grass 2xs:w-[300px] md:w-[400px] lg:w-[600px] p-4 rounded-[30px]">
             <img
               src="./AboutImages/Drip.png"
-              className={`absolute left-0 top-[80%] w-[600px] ${
+              className={`absolute left-0 2xs:top-[85%] md:top-[80%] w-[600px] ${
                 isInView ? "translate-y-0" : "-translate-y-14"
               } transition-all duration-[2400ms] ease-in-out`}
               alt="Drip"
             />
             <div
-              className={`relative text-beige z-10 font-poppins sm:text-[12px] md:text-[20px] `}
+              className={`relative text-beige z-10 font-poppins sm:text-[12px] md:text-[16px] lg:text-[20px] `}
             >
               {backgroundText}
             </div>
@@ -114,7 +114,7 @@ export default function About() {
     <section className="bg-beige h-full min-h-screen py-[150px] space-y-40">
       {/* Title */}
       <div className="relative w-full flex items-center justify-center animate-up">
-        <div className="font-finger text-[72px] text-beige z-10">
+        <div className="font-finger 2xs:text-[48px] md:text-[60px] lg:text-[72px] text-beige z-10">
           Who are we?
         </div>
         <img
