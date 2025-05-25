@@ -1,6 +1,26 @@
 import "./Hero.css";
 
 export default function Hero() {
+  const AnimateLetters = ({ text, delay }) => {
+    return text.split("").map((letter, index) => {
+      if (letter === "\n") {
+        return <br key={`br-${index}`} />;
+      }
+
+      return (
+        <span
+          key={index}
+          className="inline-block opacity-0 animate-fade-up"
+          style={{
+            animationDelay: `${index * delay}s`,
+          }}
+        >
+          <span>{letter === " " ? "\u00A0" : letter}</span>
+        </span>
+      );
+    });
+  };
+
   return (
     <section className="h-screen flex justify-center items-center w-full gap-20 2xs:px-[5%] md:px-[15%]">
       {/* Left Container */}
@@ -8,7 +28,7 @@ export default function Hero() {
         {/* Title */}
         <div className="relative flex items-center justify-center w-fit px-24 -ml-10">
           <div className="font-finger 2xs:text-[32px] md:text-[48px] lg:text-[72px] text-beige">
-            Mindmoss.
+            <AnimateLetters text="Mindmoss." delay={0.1} />
           </div>
           <img
             src="./BrushStrokes/Title.png"
@@ -17,18 +37,17 @@ export default function Hero() {
         </div>
         {/* Hero Text */}
         <div className="font-roboto font-light 2xs:text-[16px] md:text-[22px] lg:text-[24px] whitespace-nowrap">
-          <span>We grow experimental games and digital ideas.</span>
-          <br />
-          <span className="ml-2">
-            A small indie studio creating atmospheric experiences.
-          </span>
+          <AnimateLetters
+            text={`We grow experimental games and digital ideas.\nA small indie studio creating atmospheric experiences.`}
+            delay={0.015}
+          />
         </div>
         {/* CTA Buttons */}
         <div className="flex items-center 2xs:gap-[10px] md:gap-[20px] lg:gap-[30px] 2xs:text-[20px] md:text-[22px] lg:text-[24px] font-semibold font-poppins">
-          <div className="px-4 py-2 bg-grass text-beige hover:cursor-pointer transition-all duration-300">
+          <div className="px-4 py-2 bg-grass text-beige hover:px-8 hover:shadow-[inset_0_0_0_4px_#4C6A51] hover:bg-transparent hover:text-grass hover:cursor-pointer transition-all duration-300 animate-fade-up">
             View Our Work
           </div>
-          <div className="px-4 py-1 ring-4 ring-grass text-grass hover:bg-grass hover:cursor-pointer hover:text-beige transition-all duration-300">
+          <div className="px-4 py-1 ring-4 ring-grass text-grass hover:px-8 hover:bg-grass hover:cursor-pointer hover:text-beige transition-all duration-300 animate-fade-up">
             Read Our Logs
           </div>
         </div>
