@@ -1,26 +1,8 @@
 import "./Hero.css";
 
+import AnimateLetters from "../AnimateLetters";
+
 export default function Hero() {
-  const AnimateLetters = ({ text, delay }) => {
-    return text.split("").map((letter, index) => {
-      if (letter === "\n") {
-        return <br key={`br-${index}`} />;
-      }
-
-      return (
-        <span
-          key={index}
-          className="inline-block opacity-0 animate-fade-up"
-          style={{
-            animationDelay: `${index * delay}s`,
-          }}
-        >
-          <span>{letter === " " ? "\u00A0" : letter}</span>
-        </span>
-      );
-    });
-  };
-
   return (
     <section className="h-screen flex justify-center items-center w-full gap-20 2xs:px-[5%] md:px-[15%]">
       {/* Left Container */}
