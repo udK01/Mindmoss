@@ -40,7 +40,10 @@ export default function LibraryCard({
           </div>
           <div className="flex gap-1 font-bold text-grass">
             {tags.map((tag, idx) => (
-              <div key={idx} className="bg-beige py-1 px-4 rounded-full">
+              <div
+                key={idx}
+                className="bg-beige py-1 px-4 rounded-full hover:px-6 hover:cursor-pointer hover:bg-highlight hover:text-beige transition-all duration-300"
+              >
                 {tag}
               </div>
             ))}
