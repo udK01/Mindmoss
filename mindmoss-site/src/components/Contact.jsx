@@ -3,8 +3,8 @@ export default function Contact() {
     <section className="bg-beige w-full h-full min-h-screen flex justify-center items-center">
       <div className="flex flex-col justify-center items-center w-[80%] space-y-[50px] opacity-0 animate-up">
         {/* Title */}
-        <div className="relative flex items-center justify-center w-fit px-28 -ml-10">
-          <div className="font-finger text-[72px] text-beige z-10">
+        <div className="relative flex items-center justify-center w-fit 2xs:px-14 md:px-28 -ml-10">
+          <div className="font-finger 2xs:text-[38px] md:text-[72px] text-beige z-10">
             Contact Us
           </div>
           <img
@@ -13,14 +13,14 @@ export default function Contact() {
           />
         </div>
 
-        <form className="flex flex-col space-y-10">
+        <form className="flex flex-col space-y-10 w-full max-w-[500px] 2xs:text-[32px] md:text-[48px] font-patrick">
           <input
             type="text"
             id="name"
             name="name"
             required
             inputMode="text"
-            className="bg-transparent rounded-[4px] focus:outline-none text-[48px] font-patrick px-[4px] border-b-2 border-dashed border-dark_gray placeholder-dark_gray opacity-0 animate-up"
+            className="bg-transparent rounded-[4px] focus:outline-none px-[4px] border-b-2 border-dashed border-dark_gray placeholder-dark_gray opacity-0 animate-up"
             style={{ animationDelay: "200ms" }}
             placeholder="Name"
           />
@@ -30,7 +30,7 @@ export default function Contact() {
             name="email"
             required
             inputMode="email"
-            className="bg-transparent rounded-[4px] focus:outline-none text-[48px] font-patrick px-[4px] border-b-2 border-dashed border-dark_gray placeholder-dark_gray opacity-0 animate-up"
+            className="bg-transparent rounded-[4px] focus:outline-none px-[4px] border-b-2 border-dashed border-dark_gray placeholder-dark_gray opacity-0 animate-up"
             style={{ animationDelay: "400ms" }}
             placeholder="Email"
           />
@@ -39,7 +39,7 @@ export default function Contact() {
             name="message"
             required
             rows="2"
-            className="bg-transparent rounded-[4px] focus:outline-none text-[48px] font-patrick px-[4px] py-2 border-b-2 border-dashed border-dark_gray placeholder-dark_gray max-h-[300px] opacity-0 animate-up"
+            className="bg-transparent rounded-[4px] focus:outline-none px-[4px] py-2 border-b-2 border-dashed border-dark_gray placeholder-dark_gray max-h-[300px] opacity-0 animate-up"
             style={{ animationDelay: "600ms" }}
             placeholder="Message"
           />
@@ -48,8 +48,8 @@ export default function Contact() {
             className="w-full flex justify-end opacity-0 animate-up"
             style={{ animationDelay: "800ms" }}
           >
-            <button className="relative flex items-center justify-center w-fit px-16">
-              <div className="font-finger text-[48px] text-beige z-10">
+            <button className="relative flex items-center justify-center w-fit 2xs:px-12 md:px-16">
+              <div className="font-finger 2xs:text-[24px] md:text-[48px] text-beige z-10">
                 Submit
               </div>
               <img
