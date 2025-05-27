@@ -1,7 +1,7 @@
 export default function Contact() {
   return (
     <section className="bg-beige w-full h-full min-h-screen flex justify-center items-center">
-      <div className="flex flex-col justify-center items-center w-[80%] space-y-[50px]">
+      <div className="flex flex-col justify-center items-center w-[80%] space-y-[50px] opacity-0 animate-up">
         {/* Title */}
         <div className="relative flex items-center justify-center w-fit px-28 -ml-10">
           <div className="font-finger text-[72px] text-beige z-10">
@@ -20,7 +20,8 @@ export default function Contact() {
             name="name"
             required
             inputMode="text"
-            className="bg-transparent rounded-[4px] focus:outline-none text-[48px] font-patrick px-[4px] border-b-2 border-dashed border-dark_gray placeholder-dark_gray"
+            className="bg-transparent rounded-[4px] focus:outline-none text-[48px] font-patrick px-[4px] border-b-2 border-dashed border-dark_gray placeholder-dark_gray opacity-0 animate-up"
+            style={{ animationDelay: "200ms" }}
             placeholder="Name"
           />
           <input
@@ -29,7 +30,8 @@ export default function Contact() {
             name="email"
             required
             inputMode="email"
-            className="bg-transparent rounded-[4px] focus:outline-none text-[48px] font-patrick px-[4px] border-b-2 border-dashed border-dark_gray placeholder-dark_gray"
+            className="bg-transparent rounded-[4px] focus:outline-none text-[48px] font-patrick px-[4px] border-b-2 border-dashed border-dark_gray placeholder-dark_gray opacity-0 animate-up"
+            style={{ animationDelay: "400ms" }}
             placeholder="Email"
           />
           <textarea
@@ -37,11 +39,15 @@ export default function Contact() {
             name="message"
             required
             rows="2"
-            className="bg-transparent rounded-[4px] focus:outline-none text-[48px] font-patrick px-[4px] py-2 border-b-2 border-dashed border-dark_gray placeholder-dark_gray max-h-[300px]"
+            className="bg-transparent rounded-[4px] focus:outline-none text-[48px] font-patrick px-[4px] py-2 border-b-2 border-dashed border-dark_gray placeholder-dark_gray max-h-[300px] opacity-0 animate-up"
+            style={{ animationDelay: "600ms" }}
             placeholder="Message"
           />
           {/* Submit Button */}
-          <div className="w-full flex justify-end">
+          <div
+            className="w-full flex justify-end opacity-0 animate-up"
+            style={{ animationDelay: "800ms" }}
+          >
             <button className="relative flex items-center justify-center w-fit px-16">
               <div className="font-finger text-[48px] text-beige z-10">
                 Submit
