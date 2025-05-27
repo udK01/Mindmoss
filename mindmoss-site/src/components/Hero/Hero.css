@@ -1,0 +1,37 @@
+@keyframes left-swipe {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+.reveal-left-box {
+  animation-name: left-swipe;
+  animation-duration: var(--speed, 1s);
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+
+@keyframes right-swipe {
+  0% {
+    clip-path: inset(0 0 0 100%);
+    opacity: 0;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+.reveal-right-box {
+  animation-name: right-swipe;
+  animation-duration: var(--speed, 1s);
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}

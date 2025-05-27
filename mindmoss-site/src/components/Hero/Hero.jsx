@@ -12,10 +12,9 @@ export default function Hero() {
           <div className="font-finger 2xs:text-[32px] md:text-[48px] lg:text-[72px] text-beige">
             <AnimateLetters text="Mindmoss." delay={0.1} />
           </div>
-          <img
-            src="./BrushStrokes/Title.png"
-            className="absolute -z-10 object-cover"
-          />
+          <div className="absolute -z-10 reveal-left-box">
+            <img src="./BrushStrokes/Title.png" className="object-cover" />
+          </div>
         </div>
         {/* Hero Text */}
         <div className="font-roboto font-light 2xs:text-[16px] md:text-[22px] lg:text-[24px] whitespace-nowrap">
@@ -40,9 +39,21 @@ export default function Hero() {
 
       {/* Right Container */}
       <div className="2xs:absolute lg:relative md:brightness-75 lg:brightness-100 flex flex-col max-w-[50%] 2xs:space-y-5 md:space-y-8 lg:space-y-10 flex-shrink-0">
-        <img src="./HeroImage/image1.png" className="" />
-        <img src="./HeroImage/image2.png" className="z-10 scale-110 absolute" />
-        <img src="./HeroImage/image3.png" className="" />
+        <img
+          src="./HeroImage/image1.png"
+          className="opacity-0 reveal-left-box"
+          style={{ "--speed": "1s", animationDelay: "200ms" }}
+        />
+        <img
+          src="./HeroImage/image2.png"
+          className="z-10 scale-110 absolute opacity-0 reveal-right-box"
+          style={{ "--speed": "0.8s", animationDelay: "800ms" }}
+        />
+        <img
+          src="./HeroImage/image3.png"
+          className="opacity-0 reveal-left-box"
+          style={{ "--speed": "1s", animationDelay: "1200ms" }}
+        />
       </div>
     </section>
   );
