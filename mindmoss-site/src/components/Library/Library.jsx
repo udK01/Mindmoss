@@ -1,4 +1,9 @@
+import { useState } from "react";
+
+import { MdGridView, MdViewList } from "react-icons/md";
+
 import LibraryCard from "./LibraryCard";
+import LibrarySquare from "./LibrarySquare";
 
 const libraryCardInfo = [
   {
@@ -18,7 +23,7 @@ into an apartment – what can possibly go wrong?`,
   },
   {
     image: "./GameImages/game6.png",
-    title: "Dance Of The Froggermance",
+    title: "Dance Of The Froggermancer",
     tags: ["Rhythm", "Roguelike"],
     playerCount: "Single Player",
     duration: "45 Minutes",
@@ -43,21 +48,55 @@ Dont go bankrupt - the more you build, the more you pay. Keep your buildings rep
 ];
 
 export default function Library() {
+  const [displayGrid, setDisplayGrid] = useState(true);
+
   return (
     <section className="bg-beige flex flex-col items-center h-full min-h-screen relative pt-40">
-      {libraryCardInfo.map((libraryCard, index) => (
-        <LibraryCard
-          key={index}
-          top={index !== 0}
-          bottom={index !== libraryCardInfo.length - 1}
-          image={libraryCard.image}
-          title={libraryCard.title}
-          tags={libraryCard.tags}
-          playerCount={libraryCard.playerCount}
-          duration={libraryCard.duration}
-          description={libraryCard.description}
+      <div className="w-full flex items-center justify-end px-[20%] pb-[4%]">
+        <MdViewList
+          className={`size-10 ${
+            !displayGrid && "text-grass"
+          } hover:text-grass hover:cursor-pointer transition-all duration-300`}
+          onClick={() => setDisplayGrid(false)}
         />
-      ))}
+        <MdGridView
+          className={`size-10 ${
+            displayGrid && "text-grass"
+          } hover:text-grass hover:cursor-pointer transition-all duration-300`}
+          onClick={() => setDisplayGrid(true)}
+        />
+      </div>
+      {displayGrid ? (
+        <>
+          {/* Grid Display */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {libraryCardInfo.map((librarySquare, index) => (
+              <LibrarySquare
+                key={index}
+                title={librarySquare.title}
+                image={librarySquare.image}
+              />
+            ))}
+          </div>
+        </>
+      ) : (
+        <>
+          {/* Continous Display */}
+          {libraryCardInfo.map((libraryCard, index) => (
+            <LibraryCard
+              key={index}
+              top={index !== 0}
+              bottom={index !== libraryCardInfo.length - 1}
+              image={libraryCard.image}
+              title={libraryCard.title}
+              tags={libraryCard.tags}
+              playerCount={libraryCard.playerCount}
+              duration={libraryCard.duration}
+              description={libraryCard.description}
+            />
+          ))}
+        </>
+      )}
     </section>
   );
 }
