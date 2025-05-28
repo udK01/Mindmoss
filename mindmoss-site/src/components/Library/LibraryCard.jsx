@@ -11,7 +11,7 @@ export default function LibraryCard({
   description,
 }) {
   return (
-    <section className="flex flex-col items-center h-full min-h-screen relative">
+    <section className="flex flex-col items-center h-full min-h-screen relative animate-up">
       {top && (
         <img
           src="./LibraryImages/Top.png"

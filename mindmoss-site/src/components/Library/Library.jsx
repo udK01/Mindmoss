@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { AnimatePresence, motion } from "framer-motion";
 import { MdGridView, MdViewList } from "react-icons/md";
 
 import LibraryCard from "./LibraryCard";
@@ -54,49 +54,63 @@ export default function Library() {
     <section className="bg-beige flex flex-col items-center h-full min-h-screen relative pt-40">
       <div className="w-full flex items-center justify-end px-[20%] pb-[4%]">
         <MdViewList
+          title="List View"
           className={`size-10 ${
             !displayGrid && "text-grass"
           } hover:text-grass hover:cursor-pointer transition-all duration-300`}
           onClick={() => setDisplayGrid(false)}
         />
         <MdGridView
+          title="Grid View"
           className={`size-10 ${
             displayGrid && "text-grass"
           } hover:text-grass hover:cursor-pointer transition-all duration-300`}
           onClick={() => setDisplayGrid(true)}
         />
       </div>
-      {displayGrid ? (
-        <>
-          {/* Grid Display */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <AnimatePresence mode="wait">
+        {displayGrid ? (
+          <motion.div
+            key="grid"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          >
             {libraryCardInfo.map((librarySquare, index) => (
               <LibrarySquare
                 key={index}
+                index={index}
                 title={librarySquare.title}
                 image={librarySquare.image}
               />
             ))}
-          </div>
-        </>
-      ) : (
-        <>
-          {/* Continous Display */}
-          {libraryCardInfo.map((libraryCard, index) => (
-            <LibraryCard
-              key={index}
-              top={index !== 0}
-              bottom={index !== libraryCardInfo.length - 1}
-              image={libraryCard.image}
-              title={libraryCard.title}
-              tags={libraryCard.tags}
-              playerCount={libraryCard.playerCount}
-              duration={libraryCard.duration}
-              description={libraryCard.description}
-            />
-          ))}
-        </>
-      )}
+          </motion.div>
+        ) : (
+          <motion.div
+            key="list"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {libraryCardInfo.map((libraryCard, index) => (
+              <LibraryCard
+                key={index}
+                top={index !== 0}
+                bottom={index !== libraryCardInfo.length - 1}
+                image={libraryCard.image}
+                title={libraryCard.title}
+                tags={libraryCard.tags}
+                playerCount={libraryCard.playerCount}
+                duration={libraryCard.duration}
+                description={libraryCard.description}
+              />
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
