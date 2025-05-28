@@ -84,6 +84,10 @@ export default function Library() {
                 index={index}
                 title={librarySquare.title}
                 image={librarySquare.image}
+                tags={librarySquare.tags}
+                playerCount={librarySquare.playerCount}
+                duration={librarySquare.duration}
+                description={librarySquare.description}
               />
             ))}
           </motion.div>
