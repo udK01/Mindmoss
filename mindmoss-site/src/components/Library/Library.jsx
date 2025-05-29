@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdGridView, MdViewList } from "react-icons/md";
-import { IoMdSearch } from "react-icons/io";
 
+import SearchBar from "./SearchBar"; // import it
 import LibraryCard from "./LibraryCard";
 import LibrarySquare from "./LibrarySquare";
 import { useLibrary } from "../../context/LibraryProvider";
@@ -14,7 +14,6 @@ export default function Library() {
   const [filteredGames, setFilteredGames] = useState([]);
 
   const { libraryCardInfo } = useLibrary();
-  const containerRef = useRef(null);
 
   // Filter games based on search value
   useEffect(() => {
@@ -30,46 +29,15 @@ export default function Library() {
     }
   }, [searchValue, libraryCardInfo]);
 
-  // Close search on outside click
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (containerRef.current && !containerRef.current.contains(e.target)) {
-        setIsOpen(false);
-        setSearchValue("");
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
   return (
     <section className="bg-beige flex flex-col items-center h-full min-h-screen relative pt-40">
       <div className="w-full flex items-center justify-end px-[20%] pb-[4%]">
-        <div ref={containerRef} className="relative flex items-center mr-4">
-          {/* Search Icon */}
-          <button
-            onClick={() => setIsOpen((prev) => !prev)}
-            className="text-black hover:text-grass focus:outline-none"
-          >
-            <IoMdSearch className="size-10" />
-          </button>
-
-          {/* Slide-out input */}
-          <input
-            type="text"
-            value={searchValue}
-            onChange={(e) => setSearchValue(e.target.value)}
-            placeholder="Search..."
-            className={`transition-all duration-300 bg-transparent border-b-2 focus:outline-none font-roboto font-medium border-grass rounded px-4 py-2 ml-2
-              ${
-                isOpen
-                  ? "w-64 opacity-100"
-                  : "w-0 opacity-0 overflow-hidden p-0 border-none"
-              }
-            `}
-          />
-        </div>
+        <SearchBar
+          searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+        />
 
         {/* Toggle Views */}
         <MdViewList
