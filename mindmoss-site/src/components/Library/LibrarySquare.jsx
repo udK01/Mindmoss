@@ -1,8 +1,10 @@
-import { useState } from "react";
 import { FaRegUserCircle, FaRegClock } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function LibrarySquare({
   index,
+  gameId,
   title,
   image,
   tags = [],
@@ -64,9 +66,12 @@ export default function LibrarySquare({
         </div>
 
         {/* View Detail box */}
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-[-3rem] group-hover:bottom-4 transition-all duration-300 bg-grass text-beige px-4 py-2 rounded shadow-lg font-medium hover:px-8 hover:text-grass hover:bg-beige">
+        <Link
+          to={`/library/game/${gameId}`}
+          className="absolute left-1/2 -translate-x-1/2 bottom-[-3rem] group-hover:bottom-4 transition-all duration-300 bg-grass text-beige px-4 py-2 rounded shadow-lg font-medium hover:px-8 hover:text-grass hover:bg-beige"
+        >
           View Details
-        </div>
+        </Link>
       </div>
     </div>
   );

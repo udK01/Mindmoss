@@ -7,6 +7,7 @@ import LibrarySquare from "./LibrarySquare";
 
 const libraryCardInfo = [
   {
+    gameId: 1,
     image: "./GameImages/game1.png",
     title: "Five Night Tenancy",
     tags: ["Strategy", "Puzzle"],
@@ -22,6 +23,7 @@ Five Night Tenancy was created by Tbage and marshs over the course of five days 
 into an apartment – what can possibly go wrong?`,
   },
   {
+    gameId: 2,
     image: "./GameImages/game6.png",
     title: "Dance Of The Froggermancer",
     tags: ["Rhythm", "Roguelike"],
@@ -36,6 +38,7 @@ Inspired by legendary games like Frogger and Crypt of the Necrodancer, Dance of 
 challenges your reflexes, your strategic thinking and rhythmic ability.`,
   },
   {
+    gameId: 3,
     image: "./GameImages/game2.png",
     title: "Athmospheric Onslaught",
     tags: ["Survival", "Card Game"],
@@ -82,6 +85,7 @@ export default function Library() {
               <LibrarySquare
                 key={index}
                 index={index}
+                gameId={librarySquare.gameId}
                 title={librarySquare.title}
                 image={librarySquare.image}
                 tags={librarySquare.tags}
