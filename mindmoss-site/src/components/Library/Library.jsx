@@ -31,29 +31,31 @@ export default function Library() {
 
   return (
     <section className="bg-beige flex flex-col items-center h-full min-h-screen relative pt-40">
-      <div className="w-full flex items-center justify-end px-[20%] pb-[4%]">
-        <SearchBar
-          searchValue={searchValue}
-          setSearchValue={setSearchValue}
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-        />
+      <div className="w-full max-w-[80%] flex items-center justify-end pb-[4%]">
+        <div className="flex">
+          <SearchBar
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+          />
 
-        {/* Toggle Views */}
-        <MdViewList
-          title="List View"
-          className={`size-10 ${
-            !displayGrid ? "text-grass" : ""
-          } hover:text-grass hover:cursor-pointer transition-all duration-300`}
-          onClick={() => setDisplayGrid(false)}
-        />
-        <MdGridView
-          title="Grid View"
-          className={`size-10 ${
-            displayGrid ? "text-grass" : ""
-          } hover:text-grass hover:cursor-pointer transition-all duration-300`}
-          onClick={() => setDisplayGrid(true)}
-        />
+          {/* Toggle Views */}
+          <MdViewList
+            title="List View"
+            className={`size-10 ${
+              !displayGrid ? "text-grass" : ""
+            } hover:text-grass hover:cursor-pointer transition-all duration-300`}
+            onClick={() => setDisplayGrid(false)}
+          />
+          <MdGridView
+            title="Grid View"
+            className={`size-10 ${
+              displayGrid ? "text-grass" : ""
+            } hover:text-grass hover:cursor-pointer transition-all duration-300`}
+            onClick={() => setDisplayGrid(true)}
+          />
+        </div>
       </div>
 
       {/* Display Cards */}
