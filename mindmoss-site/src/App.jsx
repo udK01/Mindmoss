@@ -6,7 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import GameDetail from "./components/Library/GameDetail";
 import Library from "./components/Library/Library";
 import Contact from "./components/Contact";
-import DevLogs from "./components/DevLogs";
+import DevLogs from "./components/DevLogs/DevLogs";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
