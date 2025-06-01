@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
 export default function Log() {
   const [open, setOpen] = useState(false);
+  const contentRef = useRef(null);
 
   return (
     <div className="w-full max-w-[1200px]">
@@ -13,7 +14,7 @@ export default function Log() {
           open
             ? "rounded-t-[30px] text-black hover:text-white hover:bg-grass hover:shadow-black bg-highlight"
             : "text-white hover:text-black rounded-[30px] shadow-md shadow-black hover:bg-highlight hover:shadow-[#4c6a51] bg-grass"
-        } hover:cursor-pointer transition-all duration-300 group`}
+        } hover:cursor-pointer transition-all duration-300 group z-30`}
       >
         <div className="flex h-full justify-between items-center px-[40px] text-[24px] font-roboto font-semibold">
           <div>31/05/2025</div>
@@ -21,28 +22,38 @@ export default function Log() {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod,
             eius. Nulla rerum sed magnam ex. Explicabo perferendis
           </div>
-          <FaChevronDown className="text-black size-10 group-hover:text-beige transition-all duration-300" />
+          <FaChevronDown
+            className={`text-black size-10 group-hover:text-beige ${
+              open && "rotate-180"
+            } transition-all duration-300`}
+          />
         </div>
       </div>
 
-      {/* Dropdown box */}
-      {open && (
-        <div>
-          <div className="p-4 bg-highlight">
-            <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Laudantium eligendi optio error inventore velit, commodi similique
-              ab sed, in quis minima quia, sequi expedita reiciendis eaque!
-              Similique quaerat hic quas.
-            </p>
-          </div>
-          <img
-            src="./DevLogImages/Drip.png"
-            alt="Drip"
-            className="w-full block"
-          />
+      <div
+        ref={contentRef}
+        className={`relative overflow-hidden transition-all duration-500 ease-in-out font-poppins text-sm md:text-base ${
+          open ? "h-full" : "h-0"
+        }`}
+        style={{
+          maxHeight: open ? `${contentRef.current?.scrollHeight}px` : "0px",
+          opacity: open ? 1 : 0,
+        }}
+      >
+        <div className="p-4 bg-highlight">
+          <p className="text-lg">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium
+            eligendi optio error inventore velit, commodi similique ab sed, in
+            quis minima quia, sequi expedita reiciendis eaque! Similique quaerat
+            hic quas.
+          </p>
         </div>
-      )}
+        <img
+          src="./DevLogImages/Drip.png"
+          alt="Drip"
+          className="w-full block"
+        />
+      </div>
     </div>
   );
 }
