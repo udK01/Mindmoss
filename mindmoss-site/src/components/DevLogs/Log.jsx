@@ -13,8 +13,9 @@ export default function Log() {
         className={`h-[100px] ${
           open
             ? "rounded-t-[30px] text-black hover:text-white hover:bg-grass hover:shadow-black bg-highlight"
-            : "text-white hover:text-black rounded-[30px] shadow-md shadow-black hover:bg-highlight hover:shadow-[#4c6a51] bg-grass"
-        } hover:cursor-pointer transition-all duration-300 group z-30`}
+            : "text-white hover:text-black rounded-[30px]  hover:bg-highlight hover:shadow-[#4c6a51] bg-grass"
+        } hover:cursor-pointer transition-all duration-300 group z-30 relative`}
+        style={{ boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.2)" }}
       >
         <div className="flex h-full justify-between items-center px-[40px] text-[24px] font-roboto font-semibold">
           <div>31/05/2025</div>
@@ -32,7 +33,7 @@ export default function Log() {
 
       <div
         ref={contentRef}
-        className={`relative overflow-hidden transition-all duration-500 ease-in-out font-poppins text-sm md:text-base ${
+        className={`relative z-10 overflow-hidden transition-all duration-500 ease-in-out font-poppins text-sm md:text-base ${
           open ? "h-full" : "h-0"
         }`}
         style={{
