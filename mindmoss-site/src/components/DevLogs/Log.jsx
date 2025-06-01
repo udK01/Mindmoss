@@ -1,16 +1,48 @@
+import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
 export default function Log() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className=" w-full max-w-[1200px] h-[100px] bg-grass text-white rounded-[30px] shadow-lg hover:shadow-[#4c6a51] hover:bg-highlight hover:text-black hover:cursor-pointer transition-all duration-300 group">
-      <div className="flex h-full justify-between items-center px-[40px] text-[24px] font-roboto font-semibold">
-        <div>31/05/2025</div>
-        <div className="w-[70%] line-clamp-1">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, eius.
-          Nulla rerum sed magnam ex. Explicabo perferendis
+    <div className="w-full max-w-[1200px]">
+      {/* Main clickable box */}
+      <div
+        onClick={() => setOpen(!open)}
+        className={`h-[100px] ${
+          open
+            ? "rounded-t-[30px] text-black hover:text-white hover:bg-grass hover:shadow-black bg-highlight"
+            : "text-white hover:text-black rounded-[30px] shadow-md shadow-black hover:bg-highlight hover:shadow-[#4c6a51] bg-grass"
+        } hover:cursor-pointer transition-all duration-300 group`}
+      >
+        <div className="flex h-full justify-between items-center px-[40px] text-[24px] font-roboto font-semibold">
+          <div>31/05/2025</div>
+          <div className="w-[70%] line-clamp-1">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod,
+            eius. Nulla rerum sed magnam ex. Explicabo perferendis
+          </div>
+          <FaChevronDown className="text-black size-10 group-hover:text-beige transition-all duration-300" />
         </div>
-        <FaChevronDown className="text-black size-10 group-hover:text-beige group-hover:hover:cursor-pointer transition-all duration-300 " />
       </div>
+
+      {/* Dropdown box */}
+      {open && (
+        <div>
+          <div className="p-4 bg-highlight">
+            <p className="text-lg">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laudantium eligendi optio error inventore velit, commodi similique
+              ab sed, in quis minima quia, sequi expedita reiciendis eaque!
+              Similique quaerat hic quas.
+            </p>
+          </div>
+          <img
+            src="./DevLogImages/Drip.png"
+            alt="Drip"
+            className="w-full block"
+          />
+        </div>
+      )}
     </div>
   );
 }
