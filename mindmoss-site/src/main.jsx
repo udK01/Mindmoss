@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App.jsx";
 
 import { LibraryProvider } from "./context/LibraryProvider.jsx";
+import { DevLogProvider } from "./context/DevLogProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <LibraryProvider>
-      <App />
+      <DevLogProvider>
+        <App />
+      </DevLogProvider>
     </LibraryProvider>
   </StrictMode>
 );
