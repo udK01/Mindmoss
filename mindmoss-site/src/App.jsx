@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import GameDetail from "./components/Library/GameDetail";
+import LogBuilder from "./components/DevLogs/LogBuilder";
+import DevLogs from "./components/DevLogs/DevLogs";
 import Library from "./components/Library/Library";
 import Contact from "./components/Contact";
-import DevLogs from "./components/DevLogs/DevLogs";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
@@ -36,6 +37,7 @@ function App() {
         <Route path="/library" element={<Library />} />
         <Route path="/library/game/:gameId" element={<GameDetail />} />
         <Route path="/dev-logs" element={<DevLogs />} />
+        <Route path="/add-logs" element={<LogBuilder />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
