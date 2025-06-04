@@ -20,7 +20,7 @@ export default function LibrarySquare({
       style={{ animationDelay: `${(index % 5) * 0.2}s` }}
     >
       <div className="p-4">
-        <div className="font-robot font-semibold 2xs:text-[20px] md:text-[24px] lg:text-[28px] line-clamp-1 text-center">
+        <div className="font-robot font-semibold 2xs:text-[20px] md:text-[24px] lg:text-[28px] line-clamp-1 text-center hover:underline hover:cursor-pointer">
           {title}
         </div>
       </div>

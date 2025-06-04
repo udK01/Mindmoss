@@ -3,7 +3,7 @@ import { createContext, useContext } from "react";
 const libraryCardInfo = [
   {
     gameId: 1,
-    image: "./GameImages/game1.png",
+    image: "/GameImages/game1.png",
     title: "Five Night Tenancy",
     tags: ["Strategy", "Puzzle"],
     playerCount: "Single Player",
@@ -19,7 +19,7 @@ into an apartment – what can possibly go wrong?`,
   },
   {
     gameId: 2,
-    image: "./GameImages/game6.png",
+    image: "/GameImages/game6.png",
     title: "Dance Of The Froggermancer",
     tags: ["Rhythm", "Roguelike"],
     playerCount: "Single Player",
@@ -34,7 +34,7 @@ challenges your reflexes, your strategic thinking and rhythmic ability.`,
   },
   {
     gameId: 3,
-    image: "./GameImages/game2.png",
+    image: "/GameImages/game2.png",
     title: "Athmospheric Onslaught",
     tags: ["Survival", "Card Game"],
     playerCount: "Single Player",

@@ -40,7 +40,7 @@ export default function Footer() {
       <div className="w-full flex justify-center bg-dark_gray text-white">
         <div className="w-[80%] flex justify-between">
           <div>
-            <img src="./Logo.png" />
+            <img src="/Logo.png" />
           </div>
           <div className="flex flex-col items-center">
             <h3 className="text-lg font-semibold underline mb-3">Follow Us</h3>

@@ -14,7 +14,7 @@ export default function LibraryCard({
     <section className="flex flex-col items-center h-full min-h-screen relative animate-up">
       {top && (
         <img
-          src="./LibraryImages/Top.png"
+          src="/LibraryImages/Top.png"
           className="w-full max-w-[1200px] -mb-24 z-0"
           alt="top drip"
         />
@@ -27,7 +27,9 @@ export default function LibraryCard({
           alt="game"
         />
         <div className="flex flex-col space-y-4">
-          <div className="text-[72px] font-semibold text-white">{title}</div>
+          <div className="text-[56px] font-semibold text-white hover:underline hover:cursor-pointer line-clamp-1">
+            {title}
+          </div>
           <div className="flex gap-2 items-center">
             <div className="flex items-center gap-1 text-white">
               <FaRegUserCircle />
@@ -54,7 +56,7 @@ export default function LibraryCard({
 
       {bottom && (
         <img
-          src="./LibraryImages/Bottom.png"
+          src="/LibraryImages/Bottom.png"
           className="w-full max-w-[1200px] -mt-10 z-0"
           alt="bottom drip"
         />
