@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
+import { FiltersProvider } from "./components/Library/FilterProvider";
 import GameDetail from "./components/Library/GameDetail";
 import LogBuilder from "./components/DevLogs/LogBuilder";
 import DevLogs from "./components/DevLogs/DevLogs";
@@ -34,7 +35,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
-        <Route path="/library" element={<Library />} />
+
+        <Route
+          path="/library"
+          element={
+            <FiltersProvider>
+              <Library />
+            </FiltersProvider>
+          }
+        />
+
         <Route path="/library/game/:gameId" element={<GameDetail />} />
         <Route path="/dev-logs" element={<DevLogs />} />
         <Route path="/add-logs" element={<LogBuilder />} />
