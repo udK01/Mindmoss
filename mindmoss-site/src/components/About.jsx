@@ -58,9 +58,8 @@ export default function About() {
     return (
       <div
         id={`about-info-${index}`}
-        className={`flex ${
-          left ? "flex-row" : "flex-row-reverse space-x-reverse"
-        } w-[80%] mx-auto 2xs:space-y-52 md:-space-x-40 justify-center 2xs:items-start md:items-center`}
+        className={`flex w-[80%] mx-auto justify-center 2xs:space-y-52 2xs:items-start md:-space-x-[18rem] lg:-space-x-[30rem] xl:-space-x-40 md:items-center
+  `}
       >
         <img
           src={sideImage}
@@ -91,12 +90,12 @@ export default function About() {
           </div>
 
           {/* Background text block */}
-          <div className="relative bg-grass 2xs:w-[300px] md:w-[400px] lg:w-[600px] p-4 rounded-[30px]">
+          <div className="relative bg-grass 2xs:w-[300px] md:w-[400px] lg:w-[600px] p-4 rounded-t-[30px]">
             <img
               src="./AboutImages/Drip.png"
               className={`absolute left-0 2xs:top-[85%] md:top-[80%] w-[600px] ${
-                isInView ? "translate-y-0" : "-translate-y-14"
-              } transition-all duration-[2400ms] ease-in-out`}
+                isInView ? "translate-y-0" : "-translate-y-[5rem]"
+              } transition-all duration-[1400ms] ease-in-out`}
               alt="Drip"
             />
             <div
@@ -114,12 +113,12 @@ export default function About() {
     <section className="bg-beige h-full min-h-screen py-[150px] space-y-40">
       {/* Title */}
       <div className="relative w-full flex items-center justify-center animate-up">
-        <div className="font-finger 2xs:text-[48px] md:text-[60px] lg:text-[72px] text-beige z-10">
+        <div className="font-finger 2xs:text-[40px] md:text-[60px] lg:text-[72px] text-beige z-10">
           Who are we?
         </div>
         <img
           src="./BrushStrokes/Title.png"
-          className="absolute object-cover scale-x-110"
+          className="absolute object-cover 2xs:scale-x-100 md:scale-x-110"
         />
       </div>
 
