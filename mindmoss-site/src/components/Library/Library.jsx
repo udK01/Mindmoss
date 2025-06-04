@@ -107,7 +107,8 @@ export default function Library() {
               <LibraryCard
                 key={index}
                 top={index !== 0}
-                bottom={index !== filteredList.length - 1}
+                bottom={index !== filteredList.length - 1 || index === 0}
+                gameId={game.gameId}
                 image={game.image}
                 title={game.title}
                 tags={game.tags}

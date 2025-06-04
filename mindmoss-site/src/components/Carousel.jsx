@@ -2,16 +2,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const images = [
-  { src: "./GameImages/game1.png", alt: "Game 1" },
-  { src: "./GameImages/game2.png", alt: "Game 2" },
-  { src: "./GameImages/game3.png", alt: "Game 3" },
-  { src: "./GameImages/game4.png", alt: "Game 4" },
-  { src: "./GameImages/game5.png", alt: "Game 5" },
-  { src: "./GameImages/game6.png", alt: "Game 6" },
-];
+import { Link } from "react-router-dom";
+
+import { useLibrary } from "../context/LibraryProvider";
 
 const Carousel = () => {
+  const { libraryCardInfo } = useLibrary();
+
   const settings = {
     dots: true,
     infinite: false,
@@ -24,17 +21,18 @@ const Carousel = () => {
   return (
     <div className="">
       <Slider {...settings}>
-        {images.map((image, index) => (
-          <div
+        {libraryCardInfo.map((game, index) => (
+          <Link
             key={index}
             className="w-[400px] h-[300px] relative hover:scale-110 hover:cursor-pointer transition-all duration-300"
+            to={`/library/game/${game.gameId}`}
           >
             <img
-              src={image.src}
-              alt={image.alt}
+              src={game.image}
+              alt={game.title}
               className="object-cover shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             />
-          </div>
+          </Link>
         ))}
       </Slider>
     </div>

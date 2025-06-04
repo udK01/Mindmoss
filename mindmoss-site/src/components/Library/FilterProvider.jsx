@@ -27,6 +27,14 @@ export function FiltersProvider({ children }) {
     setSearchParams(params, { replace: true });
   }, [filters, setSearchParams]);
 
+  useEffect(() => {
+    const newFilters = {
+      name: searchParams.get("name") || "",
+      genres: searchParams.getAll("genre") || [],
+    };
+    setFilters(newFilters);
+  }, [searchParams]);
+
   const handleChange = (key) => (e) => {
     setFilters((prev) => ({
       ...prev,

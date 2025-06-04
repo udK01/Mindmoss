@@ -20,9 +20,12 @@ export default function LibrarySquare({
       style={{ animationDelay: `${(index % 5) * 0.2}s` }}
     >
       <div className="p-4">
-        <div className="font-robot font-semibold 2xs:text-[20px] md:text-[24px] lg:text-[28px] line-clamp-1 text-center hover:underline hover:cursor-pointer">
+        <Link
+          className="font-robot font-semibold 2xs:text-[20px] md:text-[24px] lg:text-[28px] line-clamp-1 text-center hover:underline hover:cursor-pointer"
+          to={`/library/game/${gameId}`}
+        >
           {title}
-        </div>
+        </Link>
       </div>
       <div
         className="relative w-full overflow-hidden rounded-lg group"
@@ -52,12 +55,13 @@ export default function LibrarySquare({
           {/* Tags */}
           <div className="flex gap-1 font-bold text-grass">
             {tags.map((tag, idx) => (
-              <div
+              <Link
+                to={`/library?genre=${tag}`}
                 key={idx}
                 className="bg-beige py-1 px-4 rounded-full hover:px-6 hover:cursor-pointer hover:bg-highlight hover:text-beige transition-all duration-300"
               >
                 {tag}
-              </div>
+              </Link>
             ))}
           </div>
           <div className="text-white whitespace-pre-line line-clamp-6">
