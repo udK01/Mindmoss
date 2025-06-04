@@ -8,13 +8,13 @@ import GameDetail from "./components/Library/GameDetail";
 import LogBuilder from "./components/DevLogs/LogBuilder";
 import DevLogs from "./components/DevLogs/DevLogs";
 import Library from "./components/Library/Library";
+import ScrollToTop from "./components/ScrollToTop";
 import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Menu from "./components/Menu";
 import Home from "./components/Home";
-
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,6 +27,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       {/* <Header /> */}
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       <AnimatePresence>
