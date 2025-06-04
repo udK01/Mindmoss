@@ -14,7 +14,7 @@ export default function ExploreOurGames() {
           setIsInView(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     const element = document.getElementById(`exploreOurGamesPaintDrip`);
@@ -33,14 +33,16 @@ export default function ExploreOurGames() {
         src="./PaintDrip.png"
         alt="Paint Drip"
         className={`absolute top-0 left-0 w-full h-full object-cover z-0 ${
-          isInView ? "translate-y-0" : "-translate-y-[500px]"
+          isInView
+            ? "2xs:-translate-y-[100px] lg:translate-y-0"
+            : "-translate-y-[500px]"
         } transition-all duration-1000 ease-in-out`}
       />
 
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col items-center space-y-40">
         {/* Text */}
-        <div className="font-rubikWet text-center text-grass 2xs:text-[40px] sm:text-[70px] md:text-[100px] xl:text-[120px]">
+        <div className="font-rubikWet text-center text-grass 2xs:text-[40px] md:text-[70px] xl:text-[120px]">
           {isInView && <AnimateLetters text="Explore Our Games" delay={0.1} />}
         </div>
 

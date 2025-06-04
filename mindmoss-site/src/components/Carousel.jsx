@@ -16,21 +16,37 @@ const Carousel = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="">
+    <div style={{ maxWidth: "100%", margin: "0 auto" }}>
       <Slider {...settings}>
         {libraryCardInfo.map((game, index) => (
-          <Link
-            key={index}
-            className="w-[400px] h-[300px] relative hover:scale-110 hover:cursor-pointer transition-all duration-300"
-            to={`/library/game/${game.gameId}`}
-          >
+          <Link key={index} to={`/library/game/${game.gameId}`}>
             <img
               src={game.image}
               alt={game.title}
-              className="object-cover shadow-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              className="hover:cursor-pointer hover:scale-105 transition-all duration-300"
             />
           </Link>
         ))}
