@@ -47,17 +47,17 @@ export default function Hero() {
       <div className="2xs:absolute lg:relative md:brightness-75 lg:brightness-100 flex flex-col max-w-[50%] 2xs:space-y-24 md:space-y-12 lg:space-y-10 flex-shrink-0">
         <img
           src="./HeroImage/image1.png"
-          className="opacity-0 reveal-left-box 2xs:scale-[180%] md:scale-100"
+          className="opacity-0 reveal-left-box 2xs:scale-[160%] md:scale-100"
           style={{ "--speed": "1s", animationDelay: "200ms" }}
         />
         <img
           src="./HeroImage/image2.png"
-          className="z-10 2xs:scale-[220%] md:scale-110 2xs:-rotate-6 pb-16 md:rotate-0 absolute opacity-0 reveal-right-box"
+          className="z-10 2xs:scale-[180%] md:scale-110 2xs:-rotate-6 pb-16 md:rotate-0 absolute opacity-0 reveal-right-box"
           style={{ "--speed": "0.8s", animationDelay: "800ms" }}
         />
         <img
           src="./HeroImage/image3.png"
-          className="opacity-0 reveal-left-box 2xs:scale-[200%] md:scale-100"
+          className="opacity-0 reveal-left-box 2xs:scale-[160%] md:scale-100"
           style={{ "--speed": "1s", animationDelay: "1200ms" }}
         />
       </div>

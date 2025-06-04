@@ -26,7 +26,7 @@ export default function ExploreOurGames() {
   }, []);
 
   return (
-    <section className="bg-grass relative w-full h-full overflow-hidden">
+    <section className="bg-grass pb-20 relative w-full h-full overflow-hidden">
       {/* Background Image */}
       <img
         id="exploreOurGamesPaintDrip"
