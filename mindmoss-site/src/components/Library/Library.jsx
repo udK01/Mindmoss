@@ -33,40 +33,41 @@ export default function Library() {
   }, [filters, libraryCardInfo]);
 
   return (
-    <section className="bg-beige flex flex-col items-center h-full min-h-screen relative pt-40">
-      <div className="w-full max-w-[80%] flex items-center justify-end pb-[4%]">
+    <section className="bg-beige flex flex-col items-center h-full min-h-screen relative pt-40 2xs:pb-40 md:pb-0">
+      <div className="w-full max-w-[80%] flex items-center justify-end 2xs:flex-col md:flex-row pb-[4%]">
         <div className="w-full flex justify-between items-center">
           <GenreFilter />
           <button
-            className="px-6 py-2 mr-10 rounded-md bg-grass text-white hover:bg-highlight hover:text-black transition-all duration-300"
+            className="px-6 py-2 2xs:mr-0 md:mr-10 rounded-md bg-grass text-white hover:bg-highlight hover:text-black transition-all duration-300"
             onClick={handleResetFilters}
           >
             Reset
           </button>
         </div>
-        <div className="flex">
+        <div className="2xs:w-full md:w-fit flex 2xs:justify-between md:justify-end">
           <SearchBar
             searchValue={searchValue}
             setSearchValue={setSearchValue}
             isOpen={isOpen}
             setIsOpen={setIsOpen}
           />
-
-          {/* Toggle Views */}
-          <MdViewList
-            title="List View"
-            className={`size-10 ${
-              !displayGrid ? "text-grass" : ""
-            } hover:text-grass hover:cursor-pointer transition-all duration-300`}
-            onClick={() => setDisplayGrid(false)}
-          />
-          <MdGridView
-            title="Grid View"
-            className={`size-10 ${
-              displayGrid ? "text-grass" : ""
-            } hover:text-grass hover:cursor-pointer transition-all duration-300`}
-            onClick={() => setDisplayGrid(true)}
-          />
+          <div className="flex gap-1">
+            {/* Toggle Views */}
+            <MdViewList
+              title="List View"
+              className={`size-10 ${
+                !displayGrid ? "text-grass" : ""
+              } hover:text-grass hover:cursor-pointer transition-all duration-300`}
+              onClick={() => setDisplayGrid(false)}
+            />
+            <MdGridView
+              title="Grid View"
+              className={`size-10 ${
+                displayGrid ? "text-grass" : ""
+              } hover:text-grass hover:cursor-pointer transition-all duration-300`}
+              onClick={() => setDisplayGrid(true)}
+            />
+          </div>
         </div>
       </div>
 

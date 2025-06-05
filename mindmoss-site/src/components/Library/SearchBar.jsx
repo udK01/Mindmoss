@@ -35,7 +35,7 @@ export default function SearchBar({ isOpen, setIsOpen }) {
         className={`transition-all duration-300 bg-transparent border-b-2 focus:outline-none font-roboto font-medium border-grass rounded px-4 py-2 ml-2
           ${
             isOpen
-              ? "w-64 opacity-100"
+              ? "2xs:w-48 lg:w-64 opacity-100"
               : "w-0 opacity-0 overflow-hidden p-0 border-none"
           }
         `}
