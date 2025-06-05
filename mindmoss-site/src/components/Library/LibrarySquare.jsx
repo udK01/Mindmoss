@@ -16,7 +16,7 @@ export default function LibrarySquare({
 
   return (
     <div
-      className="relative bg-grass rounded-lg hover:cursor-pointer text-beige opacity-0 animate-up"
+      className="relative w-full md:max-w-[299px] lg:max-w-[360px] bg-grass rounded-lg hover:cursor-pointer text-beige opacity-0 animate-up"
       style={{ animationDelay: `${(index % 5) * 0.2}s` }}
     >
       <div className="p-4">

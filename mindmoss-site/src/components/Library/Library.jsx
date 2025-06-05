@@ -33,7 +33,7 @@ export default function Library() {
   }, [filters, libraryCardInfo]);
 
   return (
-    <section className="bg-beige flex flex-col items-center h-full min-h-screen relative pt-40 2xs:pb-40 md:pb-0">
+    <section className="bg-beige flex flex-col items-center h-full min-h-screen relative py-40">
       <div className="w-full max-w-[80%] flex items-center justify-end 2xs:flex-col md:flex-row pb-[4%]">
         <div className="w-full flex justify-between items-center">
           <GenreFilter />
@@ -80,7 +80,7 @@ export default function Library() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+            className="w-[80%] flex flex-wrap gap-4"
           >
             {filteredList.map((game, index) => (
               <LibrarySquare
