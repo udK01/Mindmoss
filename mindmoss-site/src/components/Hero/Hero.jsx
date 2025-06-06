@@ -28,13 +28,13 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="flex items-center 2xs:gap-[10px] md:gap-[20px] lg:gap-[30px] 2xs:text-[20px] md:text-[22px] lg:text-[24px] font-semibold font-poppins">
           <Link
-            className="px-4 py-2 bg-grass text-beige hover:px-8 hover:shadow-[inset_0_0_0_4px_#4C6A51] hover:bg-transparent hover:text-grass hover:cursor-pointer transition-all duration-300 opacity-0 animate-up"
+            className="px-4 py-2 bg-grass rounded-md text-beige hover:px-8 hover:shadow-[inset_0_0_0_4px_#4C6A51] hover:bg-transparent hover:text-grass hover:cursor-pointer transition-all duration-300 opacity-0 animate-up"
             to={"/library"}
           >
             View Our Work
           </Link>
           <Link
-            className="px-4 py-1 ring-4 ring-grass text-grass hover:px-8 hover:bg-grass hover:cursor-pointer hover:text-beige transition-all duration-300 opacity-0 animate-up"
+            className="px-4 py-1 ring-4 rounded-md ring-grass text-grass hover:px-8 hover:bg-grass hover:cursor-pointer hover:text-beige transition-all duration-300 opacity-0 animate-up"
             style={{ animationDelay: "200ms" }}
             to={"/dev-logs"}
           >

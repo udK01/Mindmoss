@@ -1,6 +1,11 @@
+import { Link } from "react-router-dom";
+
 export default function Header({ isOpen, setIsOpen }) {
   return (
-    <div className="fixed top-8 right-4 flex items-center justify-end text-white px-[32px] z-50 w-full">
+    <div className="fixed top-8 right-4 flex items-center justify-between text-white px-[32px] z-50 w-full">
+      <Link to={"/"}>
+        <img src="/Logo.png" alt="Logo" />
+      </Link>
       <div
         className="w-[40px] h-[30px] flex flex-col justify-between cursor-pointer group"
         onClick={() => setIsOpen(!isOpen)}
