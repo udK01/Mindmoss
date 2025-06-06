@@ -15,11 +15,11 @@ export default function Menu({ setIsOpen }) {
 
   return (
     <motion.div
-      initial={{ y: "100%" }}
-      animate={{ y: 0 }}
-      exit={{ y: "-100%" }}
+      initial={{ x: "100%" }}
+      animate={{ x: "0%" }} // stops flush with right edge
+      exit={{ x: "100%" }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="fixed z-40 inset-0 bg-grass flex items-center justify-center font-roboto text-beige text-[64px]"
+      className="fixed z-40 top-0 right-0 h-full 2xs:w-[50%] lg:w-[40%] xl:w-[30%] bg-grass flex items-center justify-center font-roboto text-beige 2xs:text-[32px] md:text-[48px] lg:text-[64px] shadow-lg"
     >
       <div className="flex flex-col space-y-10">
         {links.map(({ to, label }) => (
