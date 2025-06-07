@@ -21,7 +21,7 @@ export default function LibrarySquare({
     >
       <div className="p-4">
         <Link
-          className="font-robot font-semibold 2xs:text-[20px] md:text-[24px] lg:text-[28px] line-clamp-1 text-center hover:underline hover:cursor-pointer"
+          className="font-robot font-semibold 2xs:text-[20px] md:text-[24px] lg:text-[28px] line-clamp-1 text-center hover:cursor-pointer"
           to={`/library/game/${gameId}`}
         >
           {title}

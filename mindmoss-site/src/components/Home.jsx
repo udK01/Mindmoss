@@ -3,7 +3,7 @@ import Hero from "./Hero/Hero";
 
 export default function Home() {
   return (
-    <section>
+    <section className="overflow-x-hidden">
       <Hero />
       <ExploreOurGames />
       {/* Background */}
