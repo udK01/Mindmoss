@@ -110,28 +110,32 @@ export default function About() {
   };
 
   return (
-    <section className="bg-beige h-full min-h-screen py-[150px] space-y-40">
-      {/* Title */}
-      <div className="relative w-full flex items-center justify-center animate-up">
-        <div className="font-finger 2xs:text-[40px] md:text-[60px] lg:text-[72px] text-beige z-10">
-          Who are we?
-        </div>
-        <img
-          src="./BrushStrokes/Title.png"
-          className="absolute object-cover 2xs:scale-x-100 md:scale-x-110"
-        />
-      </div>
+    <section className="relative bg-beige min-h-screen py-[150px] space-y-40 overflow-hidden">
+      <div className="absolute inset-0 w-full h-full bg-paper bg-repeat opacity-[66%] z-0" />
 
-      {aboutInfo.map((a, i) => (
-        <AboutComponent
-          key={i}
-          index={i}
-          year={a.year}
-          sideImage={a.sideImage}
-          backgroundText={a.backgroundText}
-          left={i % 2 === 0}
-        />
-      ))}
+      <div className="relative z-10">
+        {/* Title */}
+        <div className="w-full flex items-center justify-center animate-up">
+          <div className="font-finger 2xs:text-[40px] md:text-[60px] lg:text-[72px] text-beige z-10">
+            Who are we?
+          </div>
+          <img
+            src="./BrushStrokes/Title.png"
+            className="absolute object-cover 2xs:scale-x-100 md:scale-x-110"
+          />
+        </div>
+
+        {aboutInfo.map((a, i) => (
+          <AboutComponent
+            key={i}
+            index={i}
+            year={a.year}
+            sideImage={a.sideImage}
+            backgroundText={a.backgroundText}
+            left={i % 2 === 0}
+          />
+        ))}
+      </div>
     </section>
   );
 }
