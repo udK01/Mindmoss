@@ -36,7 +36,9 @@ export default function GameDetail() {
 
   return (
     <section className="min-h-screen bg-beige py-[10%] flex justify-center">
-      <div className="w-[80%] flex justify-center gap-4">
+      <div className="absolute inset-0 w-full h-full bg-paper bg-repeat opacity-[66%] z-0" />
+
+      <div className="w-[80%] flex justify-center gap-4 z-10">
         <Link to={"/library"}>
           <FaArrowAltCircleLeft className="size-16 hover:text-grass hover:cursor-pointer transition-all duration-300" />
         </Link>

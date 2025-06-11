@@ -26,7 +26,9 @@ export default function DevLogs() {
 
   return (
     <section className="min-h-screen flex flex-col justify-center items-center py-[200px] bg-beige">
-      <div className="w-[60%] py-10 flex items-center justify-end">
+      <div className="absolute inset-0 w-full h-full bg-paper bg-repeat opacity-[66%] z-0" />
+
+      <div className="w-[60%] py-10 flex items-center justify-end z-10">
         <div className="relative inline-block group">
           <div className="flex flex-col items-end">
             <FaFilter className="size-10 hover:cursor-pointer hover:text-grass transition-all duration-300" />

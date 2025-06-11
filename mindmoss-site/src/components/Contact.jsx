@@ -1,6 +1,8 @@
 export default function Contact() {
   return (
     <section className="bg-beige w-full h-full min-h-screen flex justify-center items-center">
+      <div className="absolute inset-0 w-full h-full bg-paper bg-repeat opacity-[66%] z-0" />
+
       <div className="flex flex-col justify-center items-center w-[80%] space-y-[50px] opacity-0 animate-up">
         {/* Title */}
         <div className="relative flex items-center justify-center w-fit 2xs:px-14 md:px-28 -ml-10">
