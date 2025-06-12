@@ -35,8 +35,11 @@ export default function GameDetail() {
   };
 
   return (
-    <section className="min-h-screen bg-beige py-[10%] flex justify-center">
-      <div className="absolute inset-0 w-full h-full bg-paper bg-repeat opacity-[66%] z-0" />
+    <section className="relative min-h-screen bg-beige py-[10%] flex justify-center">
+      <div
+        className="absolute inset-0 w-full h-full bg-beige bg-paper bg-repeat-y opacity-[66%] z-0"
+        style={{ backgroundSize: "100% auto" }}
+      />
 
       <div className="w-[80%] flex justify-center gap-4 z-10">
         <Link to={"/library"}>

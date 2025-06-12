@@ -1,7 +1,10 @@
 export default function Contact() {
   return (
-    <section className="bg-beige w-full h-full min-h-screen flex justify-center items-center">
-      <div className="absolute inset-0 w-full h-full bg-paper bg-repeat opacity-[66%] z-0" />
+    <section className="relative bg-beige w-full h-full min-h-screen flex justify-center items-center">
+      <div
+        className="absolute inset-0 w-full h-full bg-beige bg-paper bg-repeat-y opacity-[66%] z-0"
+        style={{ backgroundSize: "100% auto" }}
+      />
 
       <div className="flex flex-col justify-center items-center w-[80%] space-y-[50px] opacity-0 animate-up">
         {/* Title */}

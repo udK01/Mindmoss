@@ -34,7 +34,10 @@ export default function Library() {
 
   return (
     <section className="bg-beige flex flex-col items-center h-full min-h-screen relative py-40">
-      <div className="absolute inset-0 w-full h-full bg-paper bg-repeat opacity-[66%] z-0" />
+      <div
+        className="absolute inset-0 w-full h-full bg-beige bg-paper bg-repeat-y opacity-[66%] z-0"
+        style={{ backgroundSize: "100% auto" }}
+      />
 
       <div className="w-full max-w-[80%] flex items-center justify-end 2xs:flex-col md:flex-row pb-[4%]">
         <div className="w-full flex justify-between items-center">

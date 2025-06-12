@@ -25,8 +25,11 @@ export default function DevLogs() {
   }
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center py-[200px] bg-beige">
-      <div className="absolute inset-0 w-full h-full bg-paper bg-repeat opacity-[66%] z-0" />
+    <section className="relative min-h-screen flex flex-col justify-center items-center py-[200px] bg-beige">
+      <div
+        className="absolute inset-0 w-full h-full bg-beige bg-paper bg-repeat-y opacity-[66%] z-0"
+        style={{ backgroundSize: "100% auto" }}
+      />
 
       <div className="w-[60%] py-10 flex items-center justify-end z-10">
         <div className="relative inline-block group">

@@ -111,7 +111,10 @@ export default function About() {
 
   return (
     <section className="relative bg-beige min-h-screen py-[150px] space-y-40 overflow-hidden">
-      <div className="absolute inset-0 w-full h-full bg-paper bg-repeat opacity-[66%] z-0" />
+      <div
+        className="absolute inset-0 w-full h-full bg-beige bg-paper bg-repeat-y opacity-[66%] z-0"
+        style={{ backgroundSize: "100% auto" }}
+      />
 
       <div className="relative z-10">
         {/* Title */}
