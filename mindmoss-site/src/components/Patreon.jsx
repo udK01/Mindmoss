@@ -26,6 +26,7 @@ export default function Patreon() {
             className="w-[350px] max-w-full h-auto pt-20 object-contain"
             alt="Patreon Card"
           />
+
           <div className="font-pressStart text-white flex flex-col gap-4">
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-l-[30px] rounded-tr-[30px] shadow-md p-6">
               <h2 className="text-[72px] font-bold">Patreon</h2>
