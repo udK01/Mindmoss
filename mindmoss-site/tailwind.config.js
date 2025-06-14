@@ -16,6 +16,7 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         rubikWet: ['"Rubik Wet Paint"', "cursive"],
         patrick: ['"Patrick Hand"', "cursive"],
+        pressStart: ['"Press Start 2P"', "cursive"],
       },
       screens: {
         "2xs": "320px",

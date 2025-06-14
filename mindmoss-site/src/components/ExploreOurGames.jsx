@@ -38,7 +38,7 @@ export default function ExploreOurGames() {
       {/* Background Image */}
       <img
         id="exploreOurGamesPaintDrip"
-        src="./PaintDrip.png"
+        src="/PaintDrip.png"
         alt="Paint Drip"
         className="absolute top-0 left-0 w-full 2xs:h-[30%] md:h-[50%] lg:h-[40%] xl:h-[50%]"
       />
