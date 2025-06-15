@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <section className="relative w-full h-full flex flex-col">
       {/* Waves */}
-      <div className="w-full">
+      <div className="w-full z-40">
         <div className="absolute bottom-[100%] left-0 w-full overflow-hidden line-height-0 transform rotate-180">
           <svg
             className="relative block w-full h-32"

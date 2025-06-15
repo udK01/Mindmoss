@@ -51,7 +51,7 @@ function App() {
         <Route path="/add-logs" element={<LogBuilder />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }

@@ -1,3 +1,5 @@
+import AnimateLetters from "./AnimateLetters";
+
 export default function Patreon() {
   return (
     <section className="relative pb-20 w-full h-full min-h-screen">
@@ -10,11 +12,17 @@ export default function Patreon() {
         className="absolute w-full h-full object-cover z-10"
       />
 
+      <div className="relative w-full flex justify-center">
+        <div className="absolute font-rubikWet text-center text-beige 2xs:text-[40px] md:text-[70px] xl:text-[120px] z-30">
+          <AnimateLetters text="Find Us On Patreon" delay={0.1} />
+        </div>
+      </div>
+
       {/* Drip image */}
       <img
         src="/GreenDrip.png"
         alt="Paint Drip"
-        className="absolute top-0 left-0 w-full 2xs:h-[30%] md:h-[50%] lg:h-[40%] xl:h-[50%] z-20"
+        className="absolute top-0 left-0 w-full 2xs:h-[20%] md:h-[30%] lg:h-[40%] xl:h-[60%] z-20"
       />
 
       {/* Card container */}
@@ -38,9 +46,15 @@ export default function Patreon() {
             </div>
 
             <div className="w-full flex justify-end">
-              <button className="bg-grass px-6 py-2 rounded hover:px-10 transition-all duration-300">
-                Support Us
-              </button>
+              <a
+                href="https://www.patreon.com/c/Mindmoss"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-grass px-6 py-2 rounded-md hover:px-10 transition-all duration-300">
+                  Support Us
+                </button>
+              </a>
             </div>
           </div>
         </div>
