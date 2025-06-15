@@ -19,21 +19,28 @@ export default function Patreon() {
       </div>
 
       {/* Drip image */}
+      {/* <div className="relative w-full h-[400px] bg-paper bg-grass z-20" /> */}
       <img
         src="/GreenDrip.png"
         alt="Paint Drip"
-        className="absolute top-0 left-0 w-full 2xs:h-[20%] md:h-[30%] lg:h-[40%] xl:h-[60%] z-20"
+        className="absolute top-0 left-0 w-full 2xs:h-[20%] md:h-[30%] lg:h-[40%] xl:h-[60%] z-30"
       />
 
       {/* Card container */}
 
       <div className="absolute inset-0 flex items-center justify-center z-30">
         <div className="px-8 py-6 flex flex-col lg:flex-row items-center pt-40  gap-40 max-w-[90%]">
-          <img
-            src="/PatreonImages/PatreonCard.png"
-            className="w-[350px] max-w-full h-auto pt-20 object-contain"
-            alt="Patreon Card"
-          />
+          <a
+            href="https://www.patreon.com/c/Mindmoss"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/PatreonImages/PatreonCard.png"
+              className="w-[350px] max-w-full h-auto pt-20 object-contain hover:-translate-y-6 transition-all duration-500"
+              alt="Patreon Card"
+            />
+          </a>
 
           <div className="font-pressStart text-white flex flex-col gap-4">
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-l-[30px] rounded-tr-[30px] shadow-md p-6">
