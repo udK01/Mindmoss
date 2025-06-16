@@ -29,23 +29,26 @@ export default function Patreon() {
       {/* Card container */}
 
       <div className="absolute inset-0 flex items-center justify-center z-30">
-        <div className="px-8 py-6 flex flex-col lg:flex-row items-center pt-40  gap-40 max-w-[90%]">
+        <div className="px-8 py-6 flex flex-col lg:flex-row items-center md:pt-0 lg:pt-40 gap-40 md:max-w-[60%] lg:max-w-[90%]">
           <a
             href="https://www.patreon.com/c/Mindmoss"
             target="_blank"
             rel="noopener noreferrer"
+            className="w-full h-full"
           >
             <img
               src="/PatreonImages/PatreonCard.png"
-              className="w-[350px] max-w-full h-auto pt-20 object-contain hover:-translate-y-6 transition-all duration-500"
+              className="2xs:absolute lg:relative w-[350px] max-w-full h-auto pt-20 object-contain hover:-translate-y-6 transition-all duration-500"
               alt="Patreon Card"
             />
           </a>
 
-          <div className="font-pressStart text-white flex flex-col gap-4">
+          <div className="font-pressStart text-white flex flex-col gap-4 z-20">
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-l-[30px] rounded-tr-[30px] shadow-md p-6">
-              <h2 className="text-[72px] font-bold">Patreon</h2>
-              <p className="text-[24px]">
+              <h2 className="lg:text-[54px] xl:text-[72px] font-bold">
+                Patreon
+              </h2>
+              <p className="lg:text-[16px] xl:text-[24px]">
                 Like what we do?
                 <br />
                 Help us keep doing it.
