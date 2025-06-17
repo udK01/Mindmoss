@@ -12,19 +12,14 @@ export default function Patreon() {
         className="absolute w-full h-full object-cover z-10"
       />
 
-      <div className="relative w-full flex justify-center">
+      {/* Drip image */}
+      <div className="relative w-full h-[600px] bg-paper bg-grass z-20 mask-paint" />
+
+      <div className="absolute inset-0 w-full h-full flex justify-center">
         <div className="absolute font-rubikWet text-center text-beige 2xs:text-[40px] md:text-[70px] xl:text-[120px] z-30">
           <AnimateLetters text="Find Us On Patreon" delay={0.1} />
         </div>
       </div>
-
-      {/* Drip image */}
-      {/* <div className="relative w-full h-[400px] bg-paper bg-grass z-20" /> */}
-      <img
-        src="/GreenDrip.png"
-        alt="Paint Drip"
-        className="absolute top-0 left-0 w-full 2xs:h-[20%] md:h-[30%] lg:h-[40%] xl:h-[60%] z-30"
-      />
 
       {/* Card container */}
 

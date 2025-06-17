@@ -41,3 +41,12 @@
     background-blend-mode: multiply;
   }
 }
+
+.mask-paint {
+  -webkit-mask-image: url("/PaintDrip.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-image: url("/PaintDrip.png");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
