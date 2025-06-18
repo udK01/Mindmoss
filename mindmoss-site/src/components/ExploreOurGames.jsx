@@ -32,7 +32,7 @@ export default function ExploreOurGames() {
   //         } transition-all duration-1000 ease-in-out
 
   return (
-    <section className="pb-20 relative w-full h-full overflow-hidden">
+    <section className="relative w-full h-full overflow-hidden">
       <div className="absolute w-full h-full bg-grass bg-paper opacity-[100%]" />
 
       {/* Background Image */}

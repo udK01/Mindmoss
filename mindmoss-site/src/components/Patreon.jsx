@@ -1,6 +1,28 @@
+import { useEffect, useState } from "react";
+
 import AnimateLetters from "./AnimateLetters";
 
 export default function Patreon() {
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.getElementById(`patreonButton`);
+    if (element) observer.observe(element);
+
+    return () => {
+      if (element) observer.unobserve(element);
+    };
+  }, []);
+
   return (
     <section className="relative pb-20 w-full h-full min-h-screen">
       {/* Background layer */}
@@ -17,7 +39,7 @@ export default function Patreon() {
 
       <div className="absolute inset-0 w-full h-full flex justify-center">
         <div className="absolute font-rubikWet text-center text-beige 2xs:text-[40px] md:text-[70px] xl:text-[120px] z-30">
-          <AnimateLetters text="Find Us On Patreon" delay={0.1} />
+          {isInView && <AnimateLetters text="Find Us On Patreon" delay={0.1} />}
         </div>
       </div>
 
@@ -29,7 +51,7 @@ export default function Patreon() {
             href="https://www.patreon.com/c/Mindmoss"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full h-full"
+            className={`w-full h-full ${isInView && "animate-up"} opacity-0`}
           >
             <img
               src="/PatreonImages/PatreonCard.png"
@@ -39,7 +61,12 @@ export default function Patreon() {
           </a>
 
           <div className="font-pressStart text-white flex flex-col gap-4 z-20">
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-l-[30px] rounded-tr-[30px] shadow-md p-6">
+            <div
+              className={`bg-white/10 backdrop-blur-md border border-white/20 rounded-l-[30px] rounded-tr-[30px] shadow-md p-6 ${
+                isInView && "animate-up"
+              } opacity-0`}
+              style={{ animationDelay: "0.4s" }}
+            >
               <h2 className="lg:text-[54px] xl:text-[72px] font-bold">
                 Patreon
               </h2>
@@ -50,8 +77,14 @@ export default function Patreon() {
               </p>
             </div>
 
-            <div className="w-full flex justify-end">
+            <div
+              className={`w-full flex justify-end ${
+                isInView && "animate-up"
+              } opacity-0`}
+              style={{ animationDelay: "0.75s" }}
+            >
               <a
+                id="patreonButton"
                 href="https://www.patreon.com/c/Mindmoss"
                 target="_blank"
                 rel="noopener noreferrer"
