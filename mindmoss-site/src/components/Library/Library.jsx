@@ -11,7 +11,6 @@ import { useLibrary } from "../../context/LibraryProvider";
 import { useFilters } from "./FilterProvider";
 
 export default function Library() {
-  // const [displayGrid, setDisplayGrid] = useState(true);
   const [searchValue, setSearchValue] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -56,22 +55,6 @@ export default function Library() {
             isOpen={isOpen}
             setIsOpen={setIsOpen}
           />
-          {/* <div className="flex gap-1">
-            <MdViewList
-              title="List View"
-              className={`size-10 ${
-                !displayGrid ? "text-grass" : ""
-              } hover:text-grass hover:cursor-pointer transition-all duration-300`}
-              onClick={() => setDisplayGrid(false)}
-            />
-            <MdGridView
-              title="Grid View"
-              className={`size-10 ${
-                displayGrid ? "text-grass" : ""
-              } hover:text-grass hover:cursor-pointer transition-all duration-300`}
-              onClick={() => setDisplayGrid(true)}
-            />
-          </div> */}
         </div>
       </div>
 
@@ -93,56 +76,3 @@ export default function Library() {
     </section>
   );
 }
-
-{
-  /* Display Cards */
-}
-// <AnimatePresence mode="wait">
-//   {displayGrid ? (
-//     <motion.div
-//       key="grid"
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: 1 }}
-//       exit={{ opacity: 0 }}
-//       transition={{ duration: 0.3 }}
-//       className="w-[80%] flex flex-wrap gap-4"
-//     >
-//       {filteredList.map((game, index) => (
-//         <LibrarySquare
-//           key={index}
-//           index={index}
-//           gameId={game.gameId}
-//           title={game.title}
-//           image={game.image}
-//           tags={game.tags}
-//           playerCount={game.playerCount}
-//           duration={game.duration}
-//           description={game.description}
-//         />
-//       ))}
-//     </motion.div>
-//   ) : (
-//     <motion.div
-//       key="list"
-//       initial={{ opacity: 0 }}
-//       animate={{ opacity: 1 }}
-//       exit={{ opacity: 0 }}
-//       transition={{ duration: 0.3 }}
-//     >
-//       {filteredList.map((game, index) => (
-//         <LibraryCard
-//           key={index}
-//           top={index !== 0}
-//           bottom={index !== filteredList.length - 1 || index === 0}
-//           gameId={game.gameId}
-//           image={game.image}
-//           title={game.title}
-//           tags={game.tags}
-//           playerCount={game.playerCount}
-//           duration={game.duration}
-//           description={game.description}
-//         />
-//       ))}
-//     </motion.div>
-//   )}
-// </AnimatePresence>
