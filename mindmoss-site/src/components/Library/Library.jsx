@@ -1,9 +1,6 @@
-import { useState, useEffect, useMemo } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { MdGridView, MdViewList } from "react-icons/md";
+import { useState, useMemo } from "react";
 
 import SearchBar from "./SearchBar";
-import LibraryCard from "./LibraryCard";
 import LibrarySquare from "./LibrarySquare";
 import GenreFilter from "./GenreFilter";
 
