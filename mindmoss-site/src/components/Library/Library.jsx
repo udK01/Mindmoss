@@ -55,7 +55,7 @@ export default function Library() {
         </div>
       </div>
 
-      <div className="w-[80%] flex flex-wrap gap-4">
+      {/* <div className="w-[80%] flex flex-wrap gap-4">
         {filteredList.map((game, index) => (
           <LibrarySquare
             key={index}
@@ -69,7 +69,7 @@ export default function Library() {
             description={game.description}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }
