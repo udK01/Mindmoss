@@ -21,21 +21,21 @@ export default function LibrarySquare({
     >
       <div className="p-4">
         <Link
-          className="font-robot font-semibold 2xs:text-[20px] md:text-[24px] lg:text-[28px] line-clamp-1 text-center hover:cursor-pointer"
+          className="font-roboto font-semibold 2xs:text-[20px] md:text-[24px] lg:text-[28px] line-clamp-1 text-center hover:cursor-pointer"
           to={`/library/game/${gameId}`}
         >
           {title}
         </Link>
       </div>
       <div
-        className="relative w-full overflow-hidden rounded-lg group"
+        className="relative w-full h-[350px] overflow-hidden rounded-lg group"
         onMouseEnter={() => setShowInfo(true)}
         onMouseLeave={() => setShowInfo(false)}
       >
         {/* Image */}
         <img
           src={image}
-          className={`w-full rounded-lg object-cover ${
+          className={`w-full h-full rounded-lg object-cover ${
             showInfo && "blur-md"
           } transition-all duration-300`}
         />
