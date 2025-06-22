@@ -58,17 +58,20 @@ export default function About() {
     return (
       <div
         id={`about-info-${index}`}
-        className={`flex w-[80%] mx-auto justify-center 2xs:space-y-52 2xs:items-start md:-space-x-[18rem] lg:-space-x-[30rem] xl:-space-x-40 md:items-center
+        className={`flex w-[80%] mx-auto justify-center 2xs:space-y-52 2xs:items-start md:items-center md:flex-row
+    md:-space-x-[18rem] lg:-space-x-[30rem] xl:-space-x-40
   `}
       >
         <img
           src={sideImage}
           alt="Side"
-          className={`2xs:absolute md:static ${
+          className={`2xs:absolute md:static ${left ? "order-1" : "order-2"}  ${
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           } transition-all duration-700`}
         />
-        <div className="flex flex-col space-y-2">
+        <div
+          className={`flex flex-col space-y-2 ${left ? "order-1" : "order-2"} `}
+        >
           {/* Year + Brush Stroke */}
           <div className={`w-full flex ${!left && "justify-end"}`}>
             <div
