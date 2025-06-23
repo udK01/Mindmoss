@@ -17,6 +17,7 @@ export default {
         rubikWet: ['"Rubik Wet Paint"', "cursive"],
         patrick: ['"Patrick Hand"', "cursive"],
         pressStart: ['"Press Start 2P"', "cursive"],
+        fredoka: ['"Fredoka One"', "cursive"],
       },
       screens: {
         "2xs": "320px",

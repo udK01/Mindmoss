@@ -16,19 +16,11 @@ export default function LibrarySquare({
 
   return (
     <div
-      className="relative w-full md:max-w-[299px] lg:max-w-[360px] bg-grass rounded-lg hover:cursor-pointer text-beige opacity-0 animate-up"
+      className="relative w-full h-full md:max-w-[299px] lg:max-w-[360px] bg-grass rounded-lg hover:cursor-pointer text-beige opacity-0 animate-up"
       style={{ animationDelay: `${(index % 5) * 0.2}s` }}
     >
-      <div className="p-4">
-        <Link
-          className="font-roboto font-semibold 2xs:text-[20px] md:text-[24px] lg:text-[28px] line-clamp-1 text-center hover:cursor-pointer"
-          to={`/library/game/${gameId}`}
-        >
-          {title}
-        </Link>
-      </div>
       <div
-        className="relative w-full h-[350px] overflow-hidden rounded-lg group"
+        className="relative w-full h-[420px] overflow-hidden rounded-lg group"
         onMouseEnter={() => setShowInfo(true)}
         onMouseLeave={() => setShowInfo(false)}
       >
@@ -42,6 +34,9 @@ export default function LibrarySquare({
 
         <div className="absolute inset-0 bg-gray-800 bg-opacity-60 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col space-y-4 p-4 text-white">
           {/* Game Info */}
+          <div className="w-full text-center text-[28px] font-fredoka">
+            {title}
+          </div>
           <div className="w-full h-fit flex justify-between gap-2 items-center">
             <div className="flex items-center gap-1">
               <FaRegUserCircle />
@@ -64,7 +59,7 @@ export default function LibrarySquare({
               </Link>
             ))}
           </div>
-          <div className="text-white whitespace-pre-line line-clamp-6">
+          <div className="text-white whitespace-pre-line 2xs:line-clamp-5 md:line-clamp-6">
             {description}
           </div>
         </div>
