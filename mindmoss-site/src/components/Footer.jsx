@@ -39,9 +39,7 @@ export default function Footer() {
 
       <div className="w-full flex justify-center bg-dark_gray text-white">
         <div className="xl:w-[80%] flex lg:flex-row 2xs:flex-col justify-between items-center space-y-10 mb-10">
-          <div>
-            <img src="/Logo.png" />
-          </div>
+          <img src="/Logo.png" className="size-32" />
           <div className="flex flex-col items-center">
             <h3 className="text-lg font-semibold underline mb-3">Follow Us</h3>
             <div className="flex gap-4">
