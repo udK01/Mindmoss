@@ -52,6 +52,7 @@ export default function GameDetail() {
           image={game.image}
           title={game.title}
           tags={game.tags}
+          creator={game.creator}
           playerCount={game.playerCount}
           duration={game.duration}
           description={game.description}

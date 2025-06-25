@@ -1,10 +1,7 @@
-import { FaTelegramPlane } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
-import { FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa";
 
 export default function Footer() {

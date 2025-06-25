@@ -1,4 +1,5 @@
 import { FaRegUserCircle, FaRegClock } from "react-icons/fa";
+import { IoMdCreate } from "react-icons/io";
 
 import { Link } from "react-router-dom";
 
@@ -9,6 +10,7 @@ export default function LibraryCard({
   image,
   title,
   tags = [],
+  creator,
   playerCount,
   duration,
   description,
@@ -40,13 +42,26 @@ export default function LibraryCard({
             {title}
           </Link>
           <div className="flex gap-2 items-center">
-            <div className="flex items-center gap-1 text-white">
+            <div
+              className="flex items-center gap-1 text-white"
+              title="Player Count"
+            >
               <FaRegUserCircle />
               <div>{playerCount}</div>
             </div>
-            <div className="flex items-center gap-1 text-white">
+            <div
+              className="flex items-center gap-1 text-white"
+              title="Estimated Duration"
+            >
               <FaRegClock />
               <div>{duration}</div>
+            </div>
+            <div
+              className="flex items-center gap-1 text-white"
+              title="Creators"
+            >
+              <IoMdCreate />
+              {creator.join(", ")}
             </div>
           </div>
           <div className="flex gap-1 font-bold text-grass">

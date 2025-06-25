@@ -6,6 +6,7 @@ const libraryCardInfo = [
     image: "/GameImages/game1.png",
     title: "Five Night Tenancy",
     tags: ["Strategy", "Puzzle"],
+    creator: ["marshs", "tbage"],
     playerCount: "Single Player",
     duration: "45 Minutes",
     description: `Your Grandma's creepy old statue leaves something to be desired, and all your 
@@ -22,6 +23,7 @@ into an apartment – what can possibly go wrong?`,
     image: "/GameImages/game6.png",
     title: "Dance Of The Froggermancer",
     tags: ["Rhythm", "Roguelike"],
+    creator: ["marshs"],
     playerCount: "Single Player",
     duration: "45 Minutes",
     description: `As the last Froggermancer, you must battle your way through treacherous passages full of traps and lethal enemies!
@@ -37,6 +39,7 @@ challenges your reflexes, your strategic thinking and rhythmic ability.`,
     image: "/GameImages/game2.png",
     title: "Athmospheric Onslaught",
     tags: ["Survival", "Card Game"],
+    creator: ["marshs", "tbage"],
     playerCount: "Single Player",
     duration: "45 Minutes",
     description: `In Atmospheric Onslaught, you defend your little town from wave after wave of aggressive dirty storms. Place lightning rods to absorb the impact, Cotton Arrays to block the wind. Or perhaps solar shields to defend from the heavens? 
