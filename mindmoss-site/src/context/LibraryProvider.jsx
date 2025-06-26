@@ -4,6 +4,8 @@ const libraryCardInfo = [
   {
     gameId: 1,
     image: "/GameImages/game1.png",
+    steam: "",
+    itch: "https://marshs.itch.io/five-night-tenancy",
     title: "Five Night Tenancy",
     tags: ["Strategy", "Puzzle"],
     creator: ["marshs", "tbage"],
@@ -21,6 +23,8 @@ into an apartment – what can possibly go wrong?`,
   {
     gameId: 2,
     image: "/GameImages/game6.png",
+    steam: "",
+    itch: "https://marshs.itch.io/froggermancer",
     title: "Dance Of The Froggermancer",
     tags: ["Rhythm", "Roguelike"],
     creator: ["marshs"],
@@ -37,6 +41,8 @@ challenges your reflexes, your strategic thinking and rhythmic ability.`,
   {
     gameId: 3,
     image: "/GameImages/game2.png",
+    steam: "",
+    itch: "https://marshs.itch.io/atmospheric-onslaught",
     title: "Athmospheric Onslaught",
     tags: ["Survival", "Card Game"],
     creator: ["marshs", "tbage"],
@@ -45,6 +51,23 @@ challenges your reflexes, your strategic thinking and rhythmic ability.`,
     description: `In Atmospheric Onslaught, you defend your little town from wave after wave of aggressive dirty storms. Place lightning rods to absorb the impact, Cotton Arrays to block the wind. Or perhaps solar shields to defend from the heavens? 
 
 Dont go bankrupt - the more you build, the more you pay. Keep your buildings repaired; they generate more money if you do!`,
+  },
+  {
+    gameId: 4,
+    image: "/GameImages/game7.png",
+    steam: "https://store.steampowered.com/app/2077120/Hive/",
+    itch: "",
+    title: "Hive",
+    tags: ["Tower Defense", "Time Management"],
+    creator: ["tbage"],
+    playerCount: "Single Player",
+    duration: "120 Minutes",
+    description: `Stranded in another solar system on a confusing planet, you must source fuel for your ship. You'll learn how to research, build and defend in increasingly hostile scenarios across the planet. Hive tasks you with mastering three components of colonisation:
+- Agriculture: providing food to your structures to boost their productivity,
+- Industry: mining resources and refining them,
+- Defence: preventing your thin walls from being torn down by local inhabitants with several creative solutions.
+
+To get off the planet you must capture and extract from local hives and harvest crystals from deep within them. Liquefy these crystals directly into fuel and say goodbye. The mites won't miss you.`,
   },
 ];
 

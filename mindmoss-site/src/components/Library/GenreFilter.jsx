@@ -11,6 +11,8 @@ const genresList = [
   "Rhythm",
   "Survival",
   "Card Game",
+  "Time Management",
+  "Tower Defense",
 ];
 
 const GenreFilter = () => {

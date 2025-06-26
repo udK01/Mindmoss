@@ -1,4 +1,4 @@
-import { FaRegUserCircle, FaRegClock } from "react-icons/fa";
+import { FaRegUserCircle, FaRegClock, FaSteam, FaItchIo } from "react-icons/fa";
 import { IoMdCreate } from "react-icons/io";
 
 import { Link } from "react-router-dom";
@@ -8,6 +8,8 @@ export default function LibraryCard({
   bottom = true,
   gameId,
   image,
+  steam,
+  itch,
   title,
   tags = [],
   creator,
@@ -41,27 +43,51 @@ export default function LibraryCard({
           >
             {title}
           </Link>
-          <div className="flex gap-2 items-center">
-            <div
-              className="flex items-center gap-1 text-white"
-              title="Player Count"
-            >
-              <FaRegUserCircle />
-              <div>{playerCount}</div>
+          <div className="flex justify-between items-center pr-8">
+            <div className="flex gap-2">
+              <div
+                className="flex items-center gap-1 text-white"
+                title="Player Count"
+              >
+                <FaRegUserCircle />
+                <div>{playerCount}</div>
+              </div>
+              <div
+                className="flex items-center gap-1 text-white"
+                title="Estimated Duration"
+              >
+                <FaRegClock />
+                <div>{duration}</div>
+              </div>
+              <div
+                className="flex items-center gap-1 text-white"
+                title="Creators"
+              >
+                <IoMdCreate />
+                {creator.join(", ")}
+              </div>
             </div>
-            <div
-              className="flex items-center gap-1 text-white"
-              title="Estimated Duration"
-            >
-              <FaRegClock />
-              <div>{duration}</div>
-            </div>
-            <div
-              className="flex items-center gap-1 text-white"
-              title="Creators"
-            >
-              <IoMdCreate />
-              {creator.join(", ")}
+            <div className="flex gap-2 items-center text-white">
+              {steam && (
+                <a
+                  href={steam}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-dark_gray transition-colors duration-300"
+                >
+                  <FaSteam className="size-6" title="Steam" />
+                </a>
+              )}
+              {itch && (
+                <a
+                  href={itch}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-dark_gray transition-colors duration-300"
+                >
+                  <FaItchIo className="size-6" title="Itch.io" />
+                </a>
+              )}
             </div>
           </div>
           <div className="flex gap-1 font-bold text-grass">

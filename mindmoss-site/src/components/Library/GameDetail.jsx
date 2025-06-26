@@ -50,6 +50,8 @@ export default function GameDetail() {
           bottom={true}
           gameId={game.gameId}
           image={game.image}
+          steam={game.steam}
+          itch={game.itch}
           title={game.title}
           tags={game.tags}
           creator={game.creator}
