@@ -4,7 +4,11 @@ export default function Header({ isOpen, setIsOpen }) {
   return (
     <div className="fixed top-8 right-4 flex items-center justify-between text-white px-[32px] z-50 w-full">
       <Link to={"/"}>
-        <img src="/Logo.png" alt="Logo" className="size-36" />
+        <img
+          src="/Logo.png"
+          alt="Logo"
+          className="2xs:size-16 md:size-24 lg:size-36"
+        />
       </Link>
       <div
         className="w-[40px] h-[30px] flex flex-col justify-between cursor-pointer group"
