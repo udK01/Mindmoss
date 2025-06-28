@@ -42,12 +42,18 @@ const Carousel = () => {
     <div style={{ maxWidth: "100%", margin: "0 auto" }}>
       <Slider {...settings}>
         {libraryCardInfo.map((game, index) => (
-          <Link key={index} to={`/library/game/${game.gameId}`}>
-            <img
-              src={game.image}
-              alt={game.title}
-              className="hover:cursor-pointer hover:scale-105 transition-all duration-300"
-            />
+          <Link
+            key={index}
+            to={`/library/game/${game.gameId}`}
+            className="px-2"
+          >
+            <div className="aspect-[16/9] w-full overflow-hidden rounded-lg">
+              <img
+                src={game.image}
+                alt={game.title}
+                className="w-full h-full object-cover hover:cursor-pointer hover:scale-105 transition-all duration-300"
+              />
+            </div>
           </Link>
         ))}
       </Slider>
