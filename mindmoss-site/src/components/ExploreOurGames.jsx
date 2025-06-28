@@ -25,12 +25,6 @@ export default function ExploreOurGames() {
     };
   }, []);
 
-  // ${
-  //           isInView
-  //             ? "2xs:-translate-y-[100px] lg:translate-y-0"
-  //             : "-translate-y-[500px]"
-  //         } transition-all duration-1000 ease-in-out
-
   return (
     <section className="relative w-full h-full overflow-hidden">
       <div className="absolute w-full h-full bg-grass bg-paper opacity-[100%]" />
