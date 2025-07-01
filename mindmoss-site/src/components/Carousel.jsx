@@ -47,11 +47,11 @@ const Carousel = () => {
             to={`/library/game/${game.gameId}`}
             className="px-2"
           >
-            <div className="aspect-[16/9] w-full overflow-hidden rounded-lg">
+            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
               <img
                 src={game.image}
                 alt={game.title}
-                className="w-full h-full object-cover hover:cursor-pointer hover:scale-105 transition-all duration-300"
+                className="absolute top-0 left-0 w-full h-full hover:cursor-pointer hover:scale-105 transition-all duration-300"
               />
             </div>
           </Link>
