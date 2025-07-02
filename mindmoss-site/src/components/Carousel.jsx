@@ -47,7 +47,7 @@ const Carousel = () => {
             to={`/library/game/${game.gameId}`}
             className="px-2"
           >
-            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg">
               <img
                 src={game.image}
                 alt={game.title}

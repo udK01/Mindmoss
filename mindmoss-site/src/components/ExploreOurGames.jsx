@@ -45,7 +45,7 @@ export default function ExploreOurGames() {
         </div>
 
         {/* Carousel */}
-        <div className="px-10 sm:px-20 md:px-40 2xs:py-24 lg:py-64 w-full">
+        <div className="px-10 sm:px-20 2xs:py-24 md:py-32 lg:py-48 xl:py-64 w-full">
           <Carousel />
         </div>
       </div>
