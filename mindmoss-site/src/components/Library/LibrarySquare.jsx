@@ -34,9 +34,12 @@ export default function LibrarySquare({
 
         <div className="absolute inset-0 bg-gray-800 bg-opacity-60 translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex flex-col space-y-4 p-4 text-white">
           {/* Game Info */}
-          <div className="w-full text-center text-[28px] font-fredoka">
+          <Link
+            to={`/library/game/${gameId}`}
+            className="w-full text-center text-[28px] font-fredoka hover:underline"
+          >
             {title}
-          </div>
+          </Link>
           <div className="w-full h-fit flex justify-between gap-2 items-center">
             <div className="flex items-center gap-1">
               <FaRegUserCircle />
