@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 
 import LogBlock from "./LogBlock";
-import "./LogBuilder.css";
 
 import { AiFillPicture } from "react-icons/ai";
 import { RiTextBlock } from "react-icons/ri";
@@ -85,16 +84,28 @@ export default function LogBuilder() {
         </div>
 
         <div className="flex flex-wrap gap-2 mb-6">
-          <button onClick={() => addBlock("left-image")} className="btn">
+          <button
+            onClick={() => addBlock("left-image")}
+            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-grass transition-all duration-300"
+          >
             <BsLayoutTextSidebar className="size-10" />
           </button>
-          <button onClick={() => addBlock("right-image")} className="btn">
+          <button
+            onClick={() => addBlock("right-image")}
+            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-grass transition-all duration-300"
+          >
             <BsLayoutTextSidebarReverse className="size-10" />
           </button>
-          <button onClick={() => addBlock("full-text")} className="btn">
+          <button
+            onClick={() => addBlock("full-text")}
+            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-grass transition-all duration-300"
+          >
             <RiTextBlock className="size-10" />
           </button>
-          <button onClick={() => addBlock("full-image")} className="btn">
+          <button
+            onClick={() => addBlock("full-image")}
+            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-grass transition-all duration-300"
+          >
             <AiFillPicture className="size-10" />
           </button>
         </div>
