@@ -7,11 +7,9 @@ import { FaYoutube } from "react-icons/fa";
 export default function Footer() {
   return (
     <section className="relative w-full h-full flex flex-col">
-      <div className="absolute w-full h-full bg-grass bg-paper opacity-100 z-0" />
+      <div className="absolute w-full h-full bg-grass opacity-100 z-0" />
 
-      {/* Drip image */}
-      <img src="/PaintDrip.png" className="relative w-full h-full" />
-      {/* <div className="relative w-full 2xs:h-[400px] lg:h-[600px] bg-paper bg-beige z-30 mask-paint" /> */}
+      <div className="relative w-full h-[300px] xl:h-[600px] bg-beige z-20 mask-paint bg-no-repeat bg-cover bg-bottom" />
 
       <div className="w-full flex justify-center text-white z-10">
         <div className="xl:w-[80%] flex lg:flex-row 2xs:flex-col justify-between items-center space-y-10 mb-10">

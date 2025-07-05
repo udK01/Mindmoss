@@ -6,8 +6,8 @@ export default {
       colors: {
         dark_gray: "#1C1C1C",
         light_gray: "#A6A6A6",
-        beige: "#F1E9DB",
-        grass: "#4C6A51",
+        beige: "#AD7E4E", // #F1E9DB
+        grass: "#2e4f2e", // #4C6A51
         highlight: "#9CB79C",
       },
       fontFamily: {

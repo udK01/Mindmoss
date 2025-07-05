@@ -7,7 +7,7 @@ import AnimateLetters from "../AnimateLetters";
 export default function Hero() {
   return (
     <section className="h-screen flex justify-center bg-beige items-center w-full gap-20 2xs:px-[5%] md:px-[15%]">
-      <div className="absolute w-full h-full bg-beige bg-paper opacity-[66%]" />
+      <div className="absolute w-full h-full bg-beige opacity-[66%]" />
 
       {/* Left Container */}
       <div className="flex flex-col 2xs:items-center lg:items-start 2xs:space-y-[360px] md:space-y-[400px] lg:space-y-16 z-20">

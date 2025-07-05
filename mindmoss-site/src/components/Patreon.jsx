@@ -26,16 +26,15 @@ export default function Patreon() {
   return (
     <section className="relative pb-20 w-full h-full min-h-screen">
       {/* Background layer */}
-      <div className="absolute w-full h-full bg-beige bg-paper opacity-100 z-0" />
+      <div className="absolute w-full h-full bg-beige opacity-100" />
 
       {/* Decorative tile image */}
       <img
         src="/PatreonImages/Tiles.png"
-        className="absolute w-full h-full object-cover z-10"
+        className="absolute w-full h-[99%] object-cover brightness-50 blur-[3px] bottom-0"
       />
 
-      {/* Drip image */}
-      <div className="relative w-full h-[600px] bg-paper bg-grass z-20 mask-paint" />
+      <div className="relative w-full h-[300px] xl:h-[600px] bg-grass z-20 mask-paint bg-no-repeat bg-cover bg-bottom" />
 
       <div className="absolute inset-0 w-full h-full flex justify-center">
         <div className="absolute font-rubikWet text-center text-beige 2xs:text-[40px] md:text-[70px] xl:text-[120px] z-30">

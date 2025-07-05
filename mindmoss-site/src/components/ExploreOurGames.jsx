@@ -17,7 +17,7 @@ export default function ExploreOurGames() {
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById(`exploreOurGamesPaintDrip`);
+    const element = document.getElementById(`carousel`);
     if (element) observer.observe(element);
 
     return () => {
@@ -27,15 +27,9 @@ export default function ExploreOurGames() {
 
   return (
     <section className="relative w-full h-full overflow-hidden">
-      <div className="absolute w-full h-full bg-grass bg-paper opacity-[100%]" />
+      <div className="absolute w-full h-full bg-grass opacity-[100%]" />
 
-      {/* Background Image */}
-      <img
-        id="exploreOurGamesPaintDrip"
-        src="/PaintDrip.png"
-        alt="Paint Drip"
-        className="absolute top-0 left-0 w-full 2xs:h-[30%] md:h-[50%] lg:h-[40%] xl:h-[50%]"
-      />
+      <div className="absolute w-full h-[300px] xl:h-[600px] bg-beige mask-paint bg-no-repeat bg-cover bg-bottom" />
 
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col items-center">
@@ -45,7 +39,10 @@ export default function ExploreOurGames() {
         </div>
 
         {/* Carousel */}
-        <div className="px-10 sm:px-20 2xs:py-24 md:py-32 lg:py-48 xl:py-64 w-full">
+        <div
+          id="carousel"
+          className="px-10 sm:px-20 2xs:py-24 md:py-32 lg:py-48 xl:py-64 w-full"
+        >
           <Carousel />
         </div>
       </div>
