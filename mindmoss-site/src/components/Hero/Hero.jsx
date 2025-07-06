@@ -6,8 +6,8 @@ import AnimateLetters from "../AnimateLetters";
 
 export default function Hero() {
   return (
-    <section className="h-screen flex justify-center bg-beige items-center w-full gap-20 2xs:px-[5%] md:px-[15%]">
-      <div className="absolute w-full h-full bg-beige opacity-[66%]" />
+    <section className="h-screen flex justify-center bg-grass items-center w-full gap-20 2xs:px-[5%] md:px-[15%]">
+      {/* <div className="absolute w-full h-full bg-red-500 opacity-[66%]" /> */}
 
       {/* Left Container */}
       <div className="flex flex-col 2xs:items-center lg:items-start 2xs:space-y-[360px] md:space-y-[400px] lg:space-y-16 z-20">
@@ -21,7 +21,7 @@ export default function Hero() {
           </div>
         </div>
         {/* Hero Text */}
-        <div className="font-roboto font-light 2xs:hidden lg:block 2xs:text-[16px] md:text-[22px] lg:text-[24px] whitespace-nowrap">
+        <div className="font-roboto font-light text-white 2xs:hidden lg:block 2xs:text-[16px] md:text-[22px] lg:text-[24px] whitespace-nowrap">
           <AnimateLetters
             text={`We grow experimental games and digital ideas.\nA small indie studio creating atmospheric experiences.`}
             delay={0.015}
@@ -30,13 +30,13 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="flex items-center 2xs:gap-[10px] md:gap-[20px] lg:gap-[30px] 2xs:text-[20px] md:text-[22px] lg:text-[24px] font-semibold font-poppins">
           <Link
-            className="px-4 py-2 bg-grass rounded-md text-beige hover:px-8 hover:shadow-[inset_0_0_0_4px_#4C6A51] hover:bg-transparent hover:text-grass hover:cursor-pointer transition-all duration-300 opacity-0 animate-up"
+            className="px-4 py-2 bg-highlight rounded-md text-beige hover:px-8 hover:shadow-[inset_0_0_0_4px_#000000] hover:bg-transparent hover:text-white hover:cursor-pointer transition-all duration-300 opacity-0 animate-up"
             to={"/library"}
           >
             View Our Work
           </Link>
           <Link
-            className="px-4 py-1 ring-4 rounded-md ring-grass text-grass hover:px-8 hover:bg-grass hover:cursor-pointer hover:text-beige transition-all duration-300 opacity-0 animate-up"
+            className="px-4 py-1 ring-4 rounded-md ring-highlight text-beige hover:px-8 hover:bg-black hover:ring-black hover:cursor-pointer hover:text-white transition-all duration-300 opacity-0 animate-up"
             style={{ animationDelay: "200ms" }}
             to={"/dev-logs"}
           >

@@ -29,12 +29,12 @@ export default function ExploreOurGames() {
     <section className="relative w-full h-full overflow-hidden">
       <div className="absolute w-full h-full bg-grass opacity-[100%]" />
 
-      <div className="absolute w-full h-[300px] xl:h-[600px] bg-beige mask-paint bg-no-repeat bg-cover bg-bottom" />
+      <div className="absolute w-full h-[300px] xl:h-[600px] bg-gradient-to-b from-grass to-highlight mask-paint bg-no-repeat bg-cover bg-bottom" />
 
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col items-center">
         {/* Text */}
-        <div className="font-rubikWet text-center text-grass 2xs:text-[40px] md:text-[70px] xl:text-[120px]">
+        <div className="font-rubikWet text-center text-white 2xs:text-[40px] md:text-[70px] xl:text-[120px]">
           {isInView && <AnimateLetters text="Explore Our Games" delay={0.1} />}
         </div>
 
