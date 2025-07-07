@@ -26,7 +26,7 @@ export default function Patreon() {
   return (
     <section className="relative pb-20 w-full h-full min-h-screen">
       {/* Background layer */}
-      <div className="absolute w-full h-full bg-beige opacity-100" />
+      <div className="absolute w-full h-full bg-grass opacity-100" />
 
       {/* Decorative tile image */}
       <img
