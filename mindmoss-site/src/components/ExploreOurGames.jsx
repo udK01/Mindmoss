@@ -27,9 +27,9 @@ export default function ExploreOurGames() {
 
   return (
     <section className="relative w-full h-full overflow-hidden">
-      <div className="absolute w-full h-full bg-grass opacity-[100%]" />
+      <div className="absolute w-full h-full bg-gradient-to-b from-beige to-grass opacity-[100%]" />
 
-      <div className="absolute w-full h-[300px] xl:h-[600px] bg-gradient-to-b from-grass to-highlight mask-paint bg-no-repeat bg-cover bg-bottom" />
+      <div className="absolute w-full h-[300px] xl:h-[600px] bg-grass mask-paint bg-no-repeat bg-cover bg-bottom" />
 
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col items-center">
