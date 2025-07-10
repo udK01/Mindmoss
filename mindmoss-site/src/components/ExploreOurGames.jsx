@@ -27,9 +27,15 @@ export default function ExploreOurGames() {
 
   return (
     <section className="relative w-full h-full overflow-hidden">
-      <div className="absolute w-full h-full bg-gradient-to-b from-beige to-grass opacity-[100%]" />
+      <div className="absolute w-full h-full bg-grass opacity-[100%]" />
 
-      <div className="absolute w-full h-[300px] xl:h-[600px] bg-grass mask-paint bg-no-repeat bg-cover bg-bottom" />
+      <div className="absolute w-full h-[300px] xl:h-[600px]">
+        {/* Shadow Layer */}
+        <div className="absolute translate-y-[2%] w-full h-[101%] bg-beige mask-paint bg-no-repeat bg-cover bg-bottom blur-md opacity-30" />
+
+        {/* Main Layer */}
+        <div className="absolute w-full h-full bg-grass mask-paint bg-no-repeat bg-cover bg-bottom" />
+      </div>
 
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-col items-center">

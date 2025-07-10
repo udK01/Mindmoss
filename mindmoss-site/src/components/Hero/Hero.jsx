@@ -13,11 +13,11 @@ export default function Hero() {
       <div className="flex flex-col 2xs:items-center lg:items-start 2xs:space-y-[360px] md:space-y-[400px] lg:space-y-16 z-20">
         {/* Title */}
         <div className="relative flex items-center justify-center w-fit px-24 -ml-10">
-          <div className="font-finger 2xs:text-[32px] md:text-[48px] lg:text-[72px] text-beige">
+          <div className="font-finger 2xs:text-[32px] md:text-[48px] lg:text-[72px] text-grass">
             <AnimateLetters text="Mindmoss." delay={0.1} />
           </div>
           <div className="absolute -z-10 reveal-left-box">
-            <img src="./BrushStrokes/Title.png" className="object-cover" />
+            <img src="./BrushStrokes/Title3.png" className="object-cover" />
           </div>
         </div>
         {/* Hero Text */}
@@ -30,13 +30,13 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="flex items-center 2xs:gap-[10px] md:gap-[20px] lg:gap-[30px] 2xs:text-[20px] md:text-[22px] lg:text-[24px] font-semibold font-poppins">
           <Link
-            className="px-4 py-2 bg-highlight rounded-md text-beige hover:px-8 hover:shadow-[inset_0_0_0_4px_#000000] hover:bg-transparent hover:text-white hover:cursor-pointer transition-all duration-300 opacity-0 animate-up"
+            className="px-4 py-2 bg-highlight rounded-md text-grass hover:px-8 hover:shadow-[inset_0_0_0_4px_#000000] hover:bg-transparent hover:text-white hover:cursor-pointer transition-all duration-300 opacity-0 animate-up"
             to={"/library"}
           >
             View Our Work
           </Link>
           <Link
-            className="px-4 py-1 ring-4 rounded-md ring-highlight text-beige hover:px-8 hover:bg-black hover:ring-black hover:cursor-pointer hover:text-white transition-all duration-300 opacity-0 animate-up"
+            className="px-4 py-1 ring-4 rounded-md ring-highlight text-highlight hover:px-8 hover:bg-black hover:ring-black hover:cursor-pointer hover:text-white transition-all duration-300 opacity-0 animate-up"
             style={{ animationDelay: "200ms" }}
             to={"/dev-logs"}
           >

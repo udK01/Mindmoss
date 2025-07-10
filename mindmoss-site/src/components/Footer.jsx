@@ -7,9 +7,17 @@ import { FaYoutube } from "react-icons/fa";
 export default function Footer() {
   return (
     <section className="relative w-full h-full flex flex-col">
-      <div className="absolute w-full h-full bg-beige opacity-100 z-0" />
+      <div className="absolute w-full h-full bg-grass opacity-100 z-0" />
 
-      <div className="relative w-full h-[300px] xl:h-[600px] bg-grass z-20 mask-paint bg-no-repeat bg-cover bg-bottom" />
+      <div className="relative w-full h-[300px] xl:h-[600px]">
+        {/* Shadow Layer */}
+        <div className="absolute translate-y-[2%] w-full h-[101%] bg-beige mask-paint bg-no-repeat bg-cover bg-bottom blur-md opacity-30" />
+
+        {/* Main Layer */}
+        <div className="absolute w-full h-full bg-grass mask-paint bg-no-repeat bg-cover bg-bottom" />
+      </div>
+
+      {/* <div className="relative w-full h-[300px] xl:h-[600px] bg-highlight z-20 mask-paint bg-no-repeat bg-cover bg-bottom" /> */}
 
       <div className="w-full flex justify-center text-white z-10">
         <div className="xl:w-[80%] flex lg:flex-row 2xs:flex-col justify-between items-center space-y-10 mb-10">
@@ -34,13 +42,13 @@ export default function Footer() {
               Stay Updated
             </h3>
             <form className="mt-2 flex justify-center md:justify-start">
-              <div className="border-b-2 border-grass">
+              <div className="border-b-2 border-highlight">
                 <input
                   type="email"
                   placeholder="Enter your email"
                   className="p-2 bg-transparent text-white"
                 />
-                <button className="text-white rounded-r hover:text-grass transition-colors duration-300">
+                <button className="text-white rounded-r hover:text-highlight transition-colors duration-300">
                   <FaTelegramPlane className="size-6" />
                 </button>
               </div>
@@ -51,12 +59,12 @@ export default function Footer() {
 
       {/* Bottom Section */}
       <div className="w-full flex justify-center text-center text-sm text-white pb-6 z-30">
-        <div className="w-[90%] border-t border-grass pt-4">
+        <div className="w-[90%] border-t border-highlight pt-4">
           <p>
             &copy; {new Date().getFullYear()} Mindmoss | Designed & Developed by{" "}
             <a
               href="https://dominikmuranyi.dev/"
-              className="text-grass underline"
+              className="text-highlight underline"
             >
               Dominik Muranyi
             </a>
