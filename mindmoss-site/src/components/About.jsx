@@ -82,18 +82,18 @@ export default function About() {
               } transition-all duration-1000`}
             >
               <img
-                src="./BrushStrokes/Title.png"
+                src="./BrushStrokes/Title3.png"
                 className="h-[70px] w-auto z-0"
                 alt="Brush stroke"
               />
-              <div className="absolute inset-0 flex items-center pb-4 justify-center z-10 font-finger 2xs:text-[24px] md:text-[48px] lg:text-[60px] text-beige">
+              <div className="absolute inset-0 flex items-center pb-4 justify-center z-10 font-finger 2xs:text-[24px] md:text-[48px] lg:text-[60px] text-grass">
                 {year}
               </div>
             </div>
           </div>
 
           {/* Background text block */}
-          <div className="relative bg-grass 2xs:w-[300px] md:w-[400px] lg:w-[600px] p-4 rounded-t-[30px]">
+          <div className="relative bg-highlight 2xs:w-[300px] md:w-[400px] lg:w-[600px] p-4 rounded-t-[30px]">
             <img
               src="./AboutImages/Drip.png"
               className={`absolute left-0 2xs:top-[85%] md:top-[80%] w-[600px] ${
@@ -102,7 +102,7 @@ export default function About() {
               alt="Drip"
             />
             <div
-              className={`relative text-beige z-10 font-poppins sm:text-[12px] md:text-[16px] lg:text-[20px] `}
+              className={`relative text-grass z-10 font-poppins sm:text-[12px] md:text-[16px] lg:text-[20px] `}
             >
               {backgroundText}
             </div>
@@ -114,19 +114,16 @@ export default function About() {
 
   return (
     <section className="relative bg-beige min-h-screen py-[150px] space-y-40 overflow-hidden">
-      <div
-        className="absolute inset-0 w-full h-full bg-beige bg-paper bg-repeat-y opacity-[66%] z-0"
-        style={{ backgroundSize: "100% auto" }}
-      />
+      <div className="absolute inset-0 w-full h-full bg-grass" />
 
       <div className="relative z-10">
         {/* Title */}
         <div className="w-full flex items-center justify-center animate-up">
-          <div className="font-finger 2xs:text-[40px] md:text-[60px] lg:text-[72px] text-beige z-10">
+          <div className="font-finger 2xs:text-[40px] md:text-[60px] lg:text-[72px] text-grass z-10">
             Who are we?
           </div>
           <img
-            src="./BrushStrokes/Title.png"
+            src="./BrushStrokes/Title3.png"
             className="absolute object-cover 2xs:scale-x-100 md:scale-x-110"
           />
         </div>
