@@ -10,7 +10,6 @@ import { useState } from "react";
 export default function DevLogs() {
   const { logs } = useDevLogs();
 
-  const [showMenu, setShowMenu] = useState(false);
   const [sortOrder, setSortOrder] = useState("desc");
 
   const sortedLogs = sortLogsByDate(logs, sortOrder);
@@ -25,16 +24,11 @@ export default function DevLogs() {
   }
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-center py-[200px] bg-beige">
-      <div
-        className="absolute inset-0 w-full h-full bg-beige bg-paper bg-repeat-y opacity-[66%] z-0"
-        style={{ backgroundSize: "100% auto" }}
-      />
-
+    <section className="relative min-h-screen flex flex-col justify-center items-center py-[200px] bg-grass">
       <div className="w-[60%] py-10 flex items-center justify-end z-10">
         <div className="relative inline-block group">
           <div className="flex flex-col items-end">
-            <FaFilter className="size-10 hover:cursor-pointer hover:text-grass transition-all duration-300" />
+            <FaFilter className="size-10 hover:cursor-pointer hover:text-highlight transition-all duration-300" />
 
             <div
               className="absolute top-full mt-0 right-0 bg-grass rounded shadow-lg text-sm w-28 
@@ -58,7 +52,7 @@ export default function DevLogs() {
         </div>
 
         <Link to={"/add-logs"}>
-          <IoIosAddCircle className="size-14 hover:cursor-pointer hover:text-grass transition-all duration-300" />
+          <IoIosAddCircle className="size-14 hover:cursor-pointer hover:text-highlight transition-all duration-300" />
         </Link>
       </div>
       <div className="w-[80%] flex flex-col space-y-10 items-center">

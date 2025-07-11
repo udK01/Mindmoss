@@ -71,12 +71,12 @@ export default function LogBuilder() {
   };
 
   return (
-    <section className="min-h-screen bg-beige overflow-x-hidden">
+    <section className="min-h-screen bg-grass overflow-x-hidden">
       <div className="max-w-4xl mx-auto px-4 pb-40 pt-20">
         <div className="flex items-center gap-4 mb-4">
           <Link
             to={"/dev-logs"}
-            className="text-[40px] rounded-lg hover:text-grass transition-all duration-300"
+            className="text-[40px] rounded-lg hover:text-white transition-all duration-300"
           >
             <FaArrowAltCircleLeft />
           </Link>
@@ -86,25 +86,25 @@ export default function LogBuilder() {
         <div className="flex flex-wrap gap-2 mb-6">
           <button
             onClick={() => addBlock("left-image")}
-            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-grass transition-all duration-300"
+            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-black transition-all duration-300"
           >
             <BsLayoutTextSidebar className="size-10" />
           </button>
           <button
             onClick={() => addBlock("right-image")}
-            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-grass transition-all duration-300"
+            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-black transition-all duration-300"
           >
             <BsLayoutTextSidebarReverse className="size-10" />
           </button>
           <button
             onClick={() => addBlock("full-text")}
-            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-grass transition-all duration-300"
+            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-black transition-all duration-300"
           >
             <RiTextBlock className="size-10" />
           </button>
           <button
             onClick={() => addBlock("full-image")}
-            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-grass transition-all duration-300"
+            className="text-[20px] px-4 py-2 rounded-lg bg-highlight hover:text-white hover:bg-black transition-all duration-300"
           >
             <AiFillPicture className="size-10" />
           </button>
@@ -115,7 +115,7 @@ export default function LogBuilder() {
           placeholder="Enter log title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="w-full p-3 mb-6 bg-transparent border-b-2 border-dotted border-grass focus:outline-none rounded-md text-lg"
+          className="w-full p-3 mb-6 bg-transparent border-b-2 border-dotted border-highlight text-white focus:outline-none rounded-md text-lg"
         />
 
         {blocks.map((block, i) => (
@@ -151,7 +151,7 @@ export default function LogBuilder() {
           <button
             onClick={handleSave}
             disabled={!title.trim()}
-            className={`text-[20px] px-4 py-2 rounded-lg bg-highlight text-black hover:text-white hover:bg-grass transition-all duration-300 btn ${
+            className={`text-[20px] px-4 py-2 rounded-lg bg-highlight text-black hover:text-white hover:bg-black transition-all duration-300 btn ${
               !title.trim() ? "opacity-50 cursor-not-allowed" : ""
             }`}
           >
