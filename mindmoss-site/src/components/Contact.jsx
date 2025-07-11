@@ -1,19 +1,14 @@
 export default function Contact() {
   return (
-    <section className="relative bg-beige w-full h-full min-h-screen flex justify-center items-center">
-      <div
-        className="absolute inset-0 w-full h-full bg-beige bg-paper bg-repeat-y opacity-[66%] z-0"
-        style={{ backgroundSize: "100% auto" }}
-      />
-
+    <section className="relative bg-grass w-full h-full min-h-screen flex justify-center items-center">
       <div className="flex flex-col justify-center items-center w-[80%] space-y-[50px] opacity-0 animate-up">
         {/* Title */}
         <div className="relative flex items-center justify-center w-fit 2xs:px-14 md:px-28 -ml-10">
-          <div className="font-finger 2xs:text-[38px] md:text-[72px] text-beige z-10">
+          <div className="font-finger 2xs:text-[38px] md:text-[72px] text-grass z-10">
             Contact Us
           </div>
           <img
-            src="./BrushStrokes/Title.png"
+            src="./BrushStrokes/Title3.png"
             className="absolute object-cover"
           />
         </div>
@@ -54,11 +49,11 @@ export default function Contact() {
             style={{ animationDelay: "800ms" }}
           >
             <button className="relative flex items-center justify-center w-fit 2xs:px-12 md:px-16">
-              <div className="font-finger 2xs:text-[24px] md:text-[48px] text-beige z-10">
+              <div className="font-finger 2xs:text-[24px] md:text-[48px] text-grass z-10">
                 Submit
               </div>
               <img
-                src="./BrushStrokes/Title.png"
+                src="./BrushStrokes/Title3.png"
                 className="absolute object-cover"
               />
             </button>
