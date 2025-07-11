@@ -37,9 +37,9 @@ const GenreFilter = () => {
     <div className="w-fit z-10" ref={dropdownRef}>
       <div
         onClick={() => setDropdownVisible(!dropdownVisible)}
-        className={`flex items-center gap-6 bg-grass text-white px-4 py-2 ${
+        className={`flex items-center gap-6 bg-highlight text-grass px-4 py-2 ${
           dropdownVisible ? "rounded-t-md" : "rounded-md"
-        } hover:cursor-pointer transition-all duration-300 hover:bg-highlight hover:text-black`}
+        } hover:cursor-pointer transition-all duration-300 hover:bg-black hover:text-white`}
       >
         Genres
         {filters.genres.length > 0 && (
@@ -48,12 +48,12 @@ const GenreFilter = () => {
         <FaChevronDown className="text-[11px]" />
       </div>
       {dropdownVisible && (
-        <div className="absolute z-10 w-[80%] mt-2 left-1/2 transform -translate-x-1/2 bg-grass text-white p-2 rounded-b-md shadow-lg">
+        <div className="absolute z-10 w-[80%] mt-2 left-1/2 transform -translate-x-1/2 bg-highlight text-grass p-2 rounded-b-md shadow-lg">
           <div className="w-full flex flex-wrap gap-4 items-center">
             {genresList.map((genre) => (
               <label
                 key={genre}
-                className="flex items-center hover:text-dark_gray hover:cursor-pointer"
+                className="flex items-center hover:text-white hover:cursor-pointer"
               >
                 <input
                   type="checkbox"

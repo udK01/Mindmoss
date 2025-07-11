@@ -21,7 +21,7 @@ export default function SearchBar({ isOpen, setIsOpen }) {
     <div ref={containerRef} className="relative flex items-center mr-4">
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="text-black hover:text-grass focus:outline-none"
+        className="text-black hover:text-highlight focus:outline-none"
         aria-label="Toggle Search"
       >
         <IoMdSearch className="size-10" />
@@ -32,7 +32,7 @@ export default function SearchBar({ isOpen, setIsOpen }) {
         value={filters.name}
         onChange={handleChange("name")}
         placeholder="Search..."
-        className={`transition-all duration-300 bg-transparent border-b-2 focus:outline-none font-roboto font-medium border-grass rounded px-4 py-2 ml-2
+        className={`transition-all duration-300 bg-transparent border-b-2 focus:outline-none font-roboto font-medium border-highlight text-white rounded px-4 py-2 ml-2
           ${
             isOpen
               ? "2xs:w-48 lg:w-64 opacity-100"
