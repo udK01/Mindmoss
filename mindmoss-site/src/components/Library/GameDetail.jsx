@@ -35,22 +35,17 @@ export default function GameDetail() {
   };
 
   return (
-    <section className="relative min-h-screen bg-beige py-[10%] flex justify-center">
-      <div
-        className="absolute inset-0 w-full h-full bg-beige bg-paper bg-repeat-y opacity-[66%] z-0"
-        style={{ backgroundSize: "100% auto" }}
-      />
-
-      <div className="w-[80%] flex flex-col justify-center gap-4 z-10">
+    <section className="relative min-h-screen bg-grass py-[10%] flex justify-center">
+      <div className="w-[80%] flex flex-col justify-center gap-4">
         <div className="w-full flex justify-between px-24 items-center">
           <Link to={"/library"}>
-            <FaArrowAltCircleLeft className="size-16 hover:text-grass hover:cursor-pointer transition-all duration-300" />
+            <FaArrowAltCircleLeft className="size-16 hover:text-white hover:cursor-pointer transition-all duration-300" />
           </Link>
           <Link
             to={`/library/game/${randomIndex}`}
             onClick={() => handleRandomClick()}
           >
-            <FaRandom className="size-16 hover:text-grass hover:cursor-pointer transition-all duration-300" />
+            <FaRandom className="size-16 hover:text-white hover:cursor-pointer transition-all duration-300" />
           </Link>
         </div>
 

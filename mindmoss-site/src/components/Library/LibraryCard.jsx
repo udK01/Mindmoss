@@ -17,7 +17,7 @@ export default function LibraryCard({
 }) {
   return (
     <section className="flex flex-col items-center w-full min-h-screen relative animate-up px-4">
-      <div className="w-full max-w-[1200px] font-roboto flex flex-col md:flex-row items-start rounded-[30px] p-4 md:p-6 gap-6 bg-grass relative z-10">
+      <div className="w-full max-w-[1200px] font-roboto flex flex-col md:flex-row items-start rounded-[30px] p-4 md:p-6 gap-6 bg-highlight relative z-10">
         <Link
           to={`/library/game/${gameId}`}
           className="flex-shrink-0 w-full md:w-[40%]"
@@ -88,7 +88,7 @@ export default function LibraryCard({
               <Link
                 to={`/library?genre=${tag}`}
                 key={idx}
-                className="bg-beige py-1 px-4 rounded-full hover:px-6 hover:cursor-pointer hover:bg-highlight hover:text-beige transition-all duration-300 text-sm md:text-base"
+                className="bg-grass text-highlight py-1 px-4 rounded-full hover:px-6 hover:cursor-pointer hover:bg-black hover:text-white transition-all duration-300 text-sm md:text-base"
               >
                 {tag}
               </Link>
@@ -103,7 +103,7 @@ export default function LibraryCard({
 
       {bottom && (
         <img
-          src="/LibraryImages/Bottom.png"
+          src="/LibraryImages/Drip.png"
           className="w-full max-w-[1200px] 2xs:-mt-6 md:-mt-10 z-0"
           alt="bottom drip"
         />
