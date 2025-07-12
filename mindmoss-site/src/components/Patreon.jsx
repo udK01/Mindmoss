@@ -30,8 +30,8 @@ export default function Patreon() {
 
       {/* Decorative tile image */}
       <img
-        src="/PatreonImages/Tiles.png"
-        className="absolute w-full h-[99%] object-cover brightness-50 blur-[3px] bottom-0"
+        src="/PatreonImages/Tiles2.png"
+        className="absolute w-full h-[99%] object-cover brightness-50 bottom-0"
       />
 
       <div className="relative w-full h-[300px] xl:h-[600px] bg-grass z-20 mask-paint bg-no-repeat bg-cover bg-bottom" />
