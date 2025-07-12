@@ -16,7 +16,7 @@ export default function LibraryCard({
   description,
 }) {
   return (
-    <section className="flex flex-col items-center w-full min-h-screen relative animate-up px-4">
+    <section className="flex flex-col items-center w-full min-h-screen relative animate-up px-4 text-black">
       <div className="w-full max-w-[1200px] font-roboto flex flex-col md:flex-row items-start rounded-[30px] p-4 md:p-6 gap-6 bg-highlight relative z-10">
         <Link
           to={`/library/game/${gameId}`}
@@ -32,13 +32,13 @@ export default function LibraryCard({
         <div className="flex flex-col space-y-4 w-full md:w-[60%]">
           <Link
             to={`/library/game/${gameId}`}
-            className="2xs:text-[26px] sm:text-[40px] lg:text-[56px] font-semibold text-white hover:underline hover:cursor-pointer line-clamp-2"
+            className="2xs:text-[26px] sm:text-[40px] lg:text-[56px] font-semibold hover:underline hover:cursor-pointer line-clamp-2"
           >
             {title}
           </Link>
 
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-2 pr-2">
-            <div className="flex flex-wrap gap-4 text-white text-sm md:text-base">
+            <div className="flex flex-wrap gap-4 text-sm md:text-base">
               <div className="flex items-center gap-1" title="Player Count">
                 <FaRegUserCircle />
                 <span>{playerCount}</span>
@@ -59,13 +59,13 @@ export default function LibraryCard({
               </div>
             </div>
 
-            <div className="flex gap-3 items-center text-white">
+            <div className="flex gap-3 items-center">
               {steam && (
                 <a
                   href={steam}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-dark_gray transition-colors duration-300"
+                  className="hover:text-white transition-colors duration-300"
                 >
                   <FaSteam className="size-5 md:size-6" title="Steam" />
                 </a>
@@ -75,7 +75,7 @@ export default function LibraryCard({
                   href={itch}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-dark_gray transition-colors duration-300"
+                  className="hover:text-white transition-colors duration-300"
                 >
                   <FaItchIo className="size-5 md:size-6" title="Itch.io" />
                 </a>
@@ -95,7 +95,7 @@ export default function LibraryCard({
             ))}
           </div>
 
-          <div className="text-white whitespace-pre-line text-sm md:text-base">
+          <div className="whitespace-pre-line text-sm md:text-base">
             {description}
           </div>
         </div>
