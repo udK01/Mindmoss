@@ -65,7 +65,7 @@ export default function LibraryCard({
                   href={steam}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors duration-300"
+                  className="hover:text-white transition-all duration-300"
                 >
                   <FaSteam className="size-5 md:size-6" title="Steam" />
                 </a>
@@ -75,7 +75,7 @@ export default function LibraryCard({
                   href={itch}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors duration-300"
+                  className="hover:text-white transition-all duration-300"
                 >
                   <FaItchIo className="size-5 md:size-6" title="Itch.io" />
                 </a>
