@@ -3,7 +3,6 @@ import { IoMdCreate } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 export default function LibraryCard({
-  bottom = true,
   gameId,
   image,
   steam,
@@ -101,13 +100,11 @@ export default function LibraryCard({
         </div>
       </div>
 
-      {bottom && (
-        <img
-          src="/LibraryImages/Drip.png"
-          className="w-full max-w-[1200px] 2xs:-mt-6 md:-mt-10 z-0"
-          alt="bottom drip"
-        />
-      )}
+      <img
+        src="/LibraryImages/Drip.png"
+        className="w-full max-w-[1200px] 2xs:-mt-6 md:-mt-10 z-0"
+        alt="bottom drip"
+      />
     </section>
   );
 }
