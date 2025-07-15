@@ -51,12 +51,12 @@ export default function LibrarySquare({
             </div>
           </div>
           {/* Tags */}
-          <div className="flex gap-1 font-bold text-grass">
+          <div className="flex gap-1 font-bold text-highlight">
             {tags.map((tag, idx) => (
               <Link
                 to={`/library?genre=${tag}`}
                 key={idx}
-                className="bg-beige py-1 px-4 rounded-full hover:px-6 hover:cursor-pointer hover:bg-highlight hover:text-beige transition-all duration-300"
+                className="bg-grass py-1 px-4 rounded-full hover:px-6 hover:cursor-pointer hover:bg-highlight hover:text-grass transition-all duration-300"
               >
                 {tag}
               </Link>
@@ -70,7 +70,7 @@ export default function LibrarySquare({
         {/* View Detail box */}
         <Link
           to={`/library/game/${gameId}`}
-          className="absolute left-1/2 -translate-x-1/2 bottom-[-3rem] group-hover:bottom-4 transition-all duration-300 bg-grass text-beige px-4 py-2 rounded shadow-lg font-medium hover:px-8 hover:text-grass hover:bg-beige"
+          className="absolute left-1/2 -translate-x-1/2 bottom-[-3rem] group-hover:bottom-4 transition-all duration-300 bg-grass text-highlight px-4 py-2 rounded shadow-lg font-medium hover:px-8 hover:text-grass hover:bg-highlight"
         >
           View Details
         </Link>
