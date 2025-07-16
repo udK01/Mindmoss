@@ -49,7 +49,7 @@ export default function Contact() {
             style={{ animationDelay: "800ms" }}
           >
             <button className="relative flex items-center justify-center w-fit 2xs:px-12 md:px-16">
-              <div className="font-finger 2xs:text-[24px] md:text-[48px] text-grass z-10">
+              <div className="font-finger 2xs:text-[24px] md:text-[48px] text-grass hover:text-white transition-all duration-300 z-10">
                 Submit
               </div>
               <img
