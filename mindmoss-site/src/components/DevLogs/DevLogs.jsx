@@ -55,11 +55,6 @@ export default function DevLogs() {
           <IoIosAddCircle className="size-14 hover:cursor-pointer hover:text-highlight transition-all duration-300" />
         </Link>
       </div>
-      {/* <div className="w-[80%] flex flex-col space-y-10 items-center">
-        {sortedLogs.map((log, idx) => (
-          <Log key={idx} log={log} />
-        ))}
-      </div> */}
     </section>
   );
 }
