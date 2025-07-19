@@ -3,7 +3,7 @@ export default function LogBlockDisplay({ block }) {
     case "left-image":
       return (
         <div className="flex gap-4">
-          <img src={block.content.imageUrl} alt="" className="w-1/3 rounded" />
+          <img src={block.content.imageUrl} className="w-1/3" />
           <p className="w-2/3">{block.content.text}</p>
         </div>
       );
@@ -11,7 +11,7 @@ export default function LogBlockDisplay({ block }) {
       return (
         <div className="flex gap-4">
           <p className="w-2/3">{block.content.text}</p>
-          <img src={block.content.imageUrl} alt="" className="w-1/3 rounded" />
+          <img src={block.content.imageUrl} className="w-1/3" />
         </div>
       );
     case "full-text":

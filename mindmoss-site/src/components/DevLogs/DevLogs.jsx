@@ -2,6 +2,7 @@ import { FaFilter } from "react-icons/fa";
 import { IoIosAddCircle } from "react-icons/io";
 
 import Log from "./Log";
+import LogBlockDisplay from "./LogBlockDisplay";
 
 import { useDevLogs } from "../../context/DevLogProvider";
 import { Link } from "react-router-dom";
@@ -55,6 +56,25 @@ export default function DevLogs() {
           <IoIosAddCircle className="size-14 hover:cursor-pointer hover:text-highlight transition-all duration-300" />
         </Link>
       </div>
+
+      {sortedLogs.map((log, index) => (
+        <div key={index} className="w-full flex justify-center mb-10 last:mb-0">
+          <div className="2xs:w-[80%] md:w-[60%] lg:w-[40%]">
+            <div className="p-4 bg-highlight space-y-10 rounded-md">
+              <div className="text-[24px] font-bold">{log.title}</div>
+              {log.blocks && log.blocks.length > 0 ? (
+                log.blocks.map((block) => (
+                  <LogBlockDisplay key={block.id} block={block} />
+                ))
+              ) : (
+                <p className="text-lg italic text-gray-600">
+                  No content available for this log.
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
     </section>
   );
 }
