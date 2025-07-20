@@ -59,7 +59,7 @@ export default function DevLogs() {
 
       {sortedLogs.map((log, index) => (
         <div key={index} className="w-full flex justify-center mb-10 last:mb-0">
-          <div className="2xs:w-[80%] md:w-[60%] lg:w-[40%]">
+          <div className="2xs:w-[80%] md:w-[60%] lg:w-[40%] shadow-lg">
             <div className="p-4 bg-highlight space-y-10 rounded-md">
               <div className="text-[24px] font-bold">{log.title}</div>
               {log.blocks && log.blocks.length > 0 ? (
