@@ -67,7 +67,7 @@ export default function DevLogs() {
                   <LogBlockDisplay key={block.id} block={block} />
                 ))
               ) : (
-                <p className="text-lg italic font-light text-gray-600">
+                <p className="text-lg italic font-semibold text-gray-600">
                   No content available for this log.
                 </p>
               )}
