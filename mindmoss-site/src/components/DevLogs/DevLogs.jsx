@@ -61,7 +61,17 @@ export default function DevLogs() {
         <div key={index} className="w-full flex justify-center mb-10 last:mb-0">
           <div className="2xs:w-[80%] md:w-[60%] lg:w-[40%] shadow-xl">
             <div className="p-4 bg-highlight space-y-10 rounded-md">
-              <div className="text-[24px] font-bold">{log.title}</div>
+              <div className="flex justify-between items-center">
+                <div className="text-[24px] font-bold">{log.title}</div>
+                <div>
+                  {new Date(log.createdAt).toLocaleString("en-GB", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                    timeZone: "Europe/London",
+                  })}
+                </div>
+              </div>
               {log.blocks && log.blocks.length > 0 ? (
                 log.blocks.map((block) => (
                   <LogBlockDisplay key={block.id} block={block} />
