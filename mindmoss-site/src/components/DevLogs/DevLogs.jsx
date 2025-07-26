@@ -27,30 +27,15 @@ export default function DevLogs() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center py-[200px] bg-grass">
       <div className="2xs:w-[80%] lg:w-[60%] xl:w-[40%] py-10 flex flex-col items-center justify-end z-10 space-y-10">
-        <div className="w-full flex justify-between">
+        <div className="w-full flex justify-between items-center">
           <div className="relative inline-block group">
-            <div className="flex flex-col items-end">
-              <FaFilter className="size-10 hover:cursor-pointer hover:text-highlight transition-all duration-300" />
-
-              <div
-                className="absolute top-full mt-0 right-0 bg-grass rounded shadow-lg text-sm w-28 
-                    opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto 
-                    transition-all duration-200 ring-2 ring-black z-50"
-              >
-                <button
-                  onClick={() => setSortOrder("desc")}
-                  className="block w-full px-4 py-2 hover:bg-highlight hover:text-white text-left rounded-md"
-                >
-                  Newest
-                </button>
-                <button
-                  onClick={() => setSortOrder("asc")}
-                  className="block w-full px-4 py-2 hover:bg-highlight hover:text-white text-left rounded-md"
-                >
-                  Oldest
-                </button>
-              </div>
-            </div>
+            <select
+              className="px-4 py-1 bg-dark_gray text-white rounded-md hover:bg-highlight hover:text-black focus:outline-none"
+              onChange={(e) => setSortOrder(e.target.value)}
+            >
+              <option value="desc">Newest</option>
+              <option value="asc">Latest</option>
+            </select>
           </div>
 
           <Link to={"/add-logs"}>
