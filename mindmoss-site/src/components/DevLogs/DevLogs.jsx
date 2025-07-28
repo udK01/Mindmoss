@@ -30,7 +30,7 @@ export default function DevLogs() {
         <div className="w-full flex justify-between items-center">
           <div className="relative inline-block group">
             <select
-              className="px-6 py-1 bg-dark_gray text-white rounded-md hover:bg-highlight hover:text-black focus:outline-none"
+              className="px-6 py-2 bg-dark_gray text-white rounded-md hover:bg-highlight hover:text-black focus:outline-none"
               onChange={(e) => setSortOrder(e.target.value)}
             >
               <option value="desc">Newest</option>
