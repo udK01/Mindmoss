@@ -28,6 +28,8 @@ export default function DevLogs() {
   // I am just submitting at this point for the sake of keeping the streak...
 
   // Losing my mind.
+
+  // Wasting my life away with this, ey...?
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center py-[200px] bg-grass">
       <div className="2xs:w-[80%] lg:w-[60%] xl:w-[40%] py-10 flex flex-col items-center justify-end z-10 space-y-10">
